@@ -1,0 +1,46 @@
+{
+  "name": "vf2",
+  "version": "0.0.1",
+  "description": "基于AntV/F2的vue封装",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --inline --progress --open",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZiQiangWang/vf2.git"
+  },
+  "keywords": [
+    "antv",
+    "F2",
+    "vue"
+  ],
+  "author": "wangziqiang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZiQiangWang/vf2/issues"
+  },
+  "homepage": "https://github.com/ZiQiangWang/vf2#readme",
+  "dependencies": {
+    "@antv/f2": "^3.2.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "less": "^3.8.1",
+    "less-loader": "^4.1.0",
+    "style-loader": "^0.23.0",
+    "vue": "^2.5.17",
+    "vue-loader": "^15.4.1",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.17.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.7"
+  }
+}
