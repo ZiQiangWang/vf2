@@ -1,0 +1,263 @@
+<template>
+  <div class="vf-chart" :style="{
+      width: width + 'px',
+      height: height + 'px'
+    }">
+    <canvas ref="chart"></canvas>
+    <slot></slot>
+  </div>
+</template>
+
+<script>
+import Core from '@antv/f2/lib/core';
+import { camelAttrs } from './util';
+
+Core.track(false);
+
+export default {
+  name: 'vf-chart',
+  props: {
+    // 渲染用数据
+    data: {
+      type: Array,
+      required: true,
+    },
+    width: Number,
+    height: {
+      type: Number,
+      default: 250,
+    },
+    theme: String,
+  },
+  data() {
+    return {
+      scaleOptions: {},
+      axisOptions: [],
+      legendOptions: null,
+      tooltipOptions: null,
+      guideOptions: [],
+      interactionOptions: [],
+      geometryOptions: [],
+    };
+  },
+  watch: {
+    data(val) {
+      this.chart && this.chart.changeData(val);
+    },
+    theme(val) {
+      Core.Global.setTheme(val);
+    },
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.render();
+    });
+  },
+  methods: {
+    // 核心渲染函数
+    render() {
+      const windowWidth = window.innerWidth;
+      const chart = new Core.Chart({
+        el: this.$refs.chart,
+        width: this.width || windowWidth,
+        height: this.height,
+        pixelRatio: window.devicePixelRatio,
+        ...camelAttrs(this.$attrs),
+      });
+
+      if (!this.data) {
+        return;
+      }
+
+      chart.source(this.data, this.scaleOptions);
+
+      if (this.axisOptions.length) {
+        for (let i = 0; i < this.axisOptions.length; i++) {
+          const option = this.axisOptions[i];
+          const {
+            field, disabled, label, justifyLabelX, justifyLabelY, ...rest
+          } = option;
+
+          if (!field && disabled) {
+            chart.axis(false);
+            break;
+          } else if (field && disabled) {
+            chart.axis(field, false);
+          } else if (field && !disabled) {
+            rest.label = this.axisLabel(label, justifyLabelX, justifyLabelY);
+            chart.axis(field, rest);
+          }
+        }
+      }
+
+      if (this.legendOptions) {
+        const { field, disabled, ...rest } = this.legendOptions;
+        if (!field && disabled) {
+          chart.legend(false);
+        } else if (disabled) {
+          chart.legend(field, false);
+        } else if (field) {
+          chart.legend(field, rest);
+        } else {
+          chart.legend(rest);
+        }
+      }
+
+      if (this.tooltipOptions) {
+        const { disabled, ...rest } = this.tooltipOptions;
+        if (disabled) {
+          chart.tooltip(false);
+        } else {
+          chart.tooltip(rest);
+        }
+      }
+
+      if (this.coordOptions) {
+        const { type, ...rest } = this.coordOptions;
+        chart.coord(type, rest);
+      }
+
+      if (this.guideOptions.length) {
+        this.guideOptions.forEach((option) => {
+          const {
+            type, chartStyle, ref, ...rest
+          } = option;
+          const guide = chart.guide()[type]({
+            ...rest,
+            style: chartStyle,
+          });
+          ref.setInstance(guide);
+        });
+      }
+
+      if (this.interactionOptions.length) {
+        this.interactionOptions.forEach((option) => {
+          const { type, chartStyle, ...rest } = option;
+          chart.interaction(type, {
+            ...rest,
+            style: chartStyle,
+          });
+        });
+      }
+
+      this.geometryOptions.forEach((option) => {
+        const { type, ...rest } = option;
+        this.registerGeometry(chart, type, rest);
+      });
+
+      chart.render();
+      this.chart = chart;
+    },
+    // 注册
+    registerGeometry(chart, type, option) {
+      const {
+        position, shape, color, size, adjust, animate, chartStyle,
+      } = option;
+      const rs = chart[type]().position(position).shape(shape);
+
+      color && rs.color(...this.normalize(color));
+      size && rs.size(...this.normalize(size));
+      adjust && rs.adjust(adjust);
+      animate !== undefined && rs.animate(animate);
+      chartStyle && rs.style(...this.normalize(chartStyle));
+    },
+    axisLabel(label, justifyLabelX, justifyLabelY) {
+      if (!justifyLabelX && !justifyLabelY) {
+        return label;
+      }
+
+      if (label === null) {
+        return null;
+      }
+
+      if (justifyLabelX) {
+        return (text, index, total) => {
+          let textCfg = {
+            textAlign: 'center',
+          };
+
+          if (index === 0) {
+            textCfg.textAlign = 'left';
+          } else if (index === total - 1) {
+            textCfg.textAlign = 'right';
+          }
+          if (typeof label === 'object') {
+            textCfg = Object.assign({}, textCfg, label);
+          } else if (typeof label === 'function') {
+            textCfg = Object.assign({}, textCfg, label(text, index, total));
+          }
+          return textCfg;
+        };
+      }
+      if (justifyLabelY) {
+        return (text, index, total) => {
+          let textCfg = {
+            textAlign: 'start',
+          };
+
+          if (index === 0) {
+            textCfg.textBaseline = 'bottom';
+          } else if (index === total - 1) {
+            textCfg.textBaseline = 'top';
+          }
+
+          if (typeof label === 'object') {
+            textCfg = Object.assign({}, textCfg, label);
+          } else if (typeof label === 'function') {
+            textCfg = Object.assign({}, textCfg, label(text, index, total));
+          }
+          return textCfg;
+        };
+      }
+      return undefined;
+    },
+    // 归一化成数组
+    normalize(params) {
+      if (Array.isArray(params)) {
+        return params;
+      }
+      return [params];
+    },
+    // 添加形状的选项
+    addGeometryOption(option) {
+      this.geometryOptions.push(option);
+    },
+    // 设置选项
+    setOption(name, options) {
+      this[`set${name}`](options);
+    },
+    setLegend(options) {
+      this.legendOptions = options;
+    },
+    setTooltip(options) {
+      this.tooltipOptions = options;
+    },
+    setGuide(options) {
+      this.guideOptions.push(options);
+    },
+    setInteraction(options) {
+      this.interactionOptions.push(options);
+    },
+    setScale(options) {
+      const { field, ...rest } = options;
+      this.scaleOptions[field] = rest;
+    },
+    setAxis(options) {
+      this.axisOptions.push(options);
+    },
+    setCoord(options) {
+      this.coordOptions = options;
+    },
+    repaint() {
+      this.chart && this.chart.repaint();
+    },
+    rerender() {
+      this.destroy();
+      this.render();
+    },
+    destroy() {
+      this.chart && this.chart.destroy();
+    },
+  },
+};
+</script>
