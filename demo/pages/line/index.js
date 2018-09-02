@@ -4,6 +4,7 @@ import Smooth from './smooth';
 import Series from './series';
 import Gradient from './gradient';
 import Hybird from './hybird';
+import Shapes from './shapes';
 
 export default [
   {
@@ -35,5 +36,10 @@ export default [
     path: 'line/hybird',
     meta: { name: '特性案例：实虚混合线图' },
     component: Hybird,
+  },
+  {
+    path: 'line/shapes',
+    meta: { name: '实际收益和预期收益对比' },
+    component: Shapes,
   },
 ];

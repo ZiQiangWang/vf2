@@ -6,7 +6,7 @@ export default {
   mixins: [geometry],
   props: {
     shape: {
-      type: String,
+      type: [String, Array],
       default: 'circle',
     },
   },

@@ -197,8 +197,9 @@ export default {
       const {
         position, shape, color, size, adjust, animate, chartStyle,
       } = option;
-      const rs = chart[type]().position(position).shape(shape);
+      const rs = chart[type]().position(position);
 
+      color && rs.shape(...this.normalize(shape));
       color && rs.color(...this.normalize(color));
       size && rs.size(...this.normalize(size));
       adjust && rs.adjust(adjust);
