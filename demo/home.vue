@@ -6,6 +6,7 @@
     <div class="cell" @click="to('line/smooth')">曲线图（带点）</div>
     <div class="cell" @click="to('line/series')">商品价格 7 年走势对比</div>
     <div class="cell" @click="to('line/gradient')">某国女性结婚年龄走势</div>
+    <div class="cell" @click="to('line/hybird')">特性案例：实虚混合线图</div>
   </div>
 </template>
 

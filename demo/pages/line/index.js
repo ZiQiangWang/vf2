@@ -3,6 +3,7 @@ import WithPoint from './with-point';
 import Smooth from './smooth';
 import Series from './series';
 import Gradient from './gradient';
+import Hybird from './hybird';
 
 export default [
   {
@@ -29,5 +30,10 @@ export default [
     path: 'line/gradient',
     meta: { name: '某国女性结婚年龄走势' },
     component: Gradient,
+  },
+  {
+    path: 'line/hybird',
+    meta: { name: '特性案例：实虚混合线图' },
+    component: Hybird,
   },
 ];
