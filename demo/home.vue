@@ -4,6 +4,7 @@
     <div class="cell" @click="to('line/basic')">基本折线图</div>
     <div class="cell" @click="to('line/with-point')">基本折线图（带点）</div>
     <div class="cell" @click="to('line/smooth')">曲线图（带点）</div>
+    <div class="cell" @click="to('line/gradient')">某国女性结婚年龄走势</div>
   </div>
 </template>
 

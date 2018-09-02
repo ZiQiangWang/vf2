@@ -29,9 +29,14 @@ export const geometry = {
 
 
 export const base = {
+  props: {
+    options: Object,
+  },
   created() {
+    const { options, ...rest } = this.$props;
     this.$parent.setOption(upperFirst(this.name), {
-      ...this.$props,
+      ...options,
+      ...rest,
       ...camelAttrs(this.$attrs),
       ref: this,
     });

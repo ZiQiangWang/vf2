@@ -1,6 +1,7 @@
 import Basic from './basic';
 import WithPoint from './with-point';
 import Smooth from './smooth';
+import Gradient from './gradient';
 
 export default [
   {
@@ -17,6 +18,11 @@ export default [
     path: 'line/smooth',
     meta: { name: '曲线图（带点）' },
     component: Smooth,
+  },
+  {
+    path: 'line/gradient',
+    meta: { name: '某国女性结婚年龄走势' },
+    component: Gradient,
   },
 
 ];
