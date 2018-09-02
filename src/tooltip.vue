@@ -5,6 +5,7 @@ export default {
   name: 'vf-tooltip',
   mixins: [base],
   props: {
+    linkLegend: Boolean,
     disabled: Boolean,
   },
   data() {
