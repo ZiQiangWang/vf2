@@ -1,6 +1,7 @@
 import Basic from './basic';
 import WithPoint from './with-point';
 import Smooth from './smooth';
+import Series from './series';
 import Gradient from './gradient';
 
 export default [
@@ -20,9 +21,13 @@ export default [
     component: Smooth,
   },
   {
+    path: 'line/series',
+    meta: { name: '商品价格 7 年走势对比' },
+    component: Series,
+  },
+  {
     path: 'line/gradient',
     meta: { name: '某国女性结婚年龄走势' },
     component: Gradient,
   },
-
 ];

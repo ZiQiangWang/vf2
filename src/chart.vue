@@ -104,12 +104,56 @@ export default {
       }
 
       if (this.tooltipOptions) {
-        const { disabled, ...rest } = this.tooltipOptions;
+        const { disabled, linkLegend, ...rest } = this.tooltipOptions;
+        let options = rest;
+
         if (disabled) {
-          chart.tooltip(false);
-        } else {
-          chart.tooltip(rest);
+          options = false;
+        } else if (linkLegend) {
+          options = {
+            ...rest,
+            custom: true, // 自定义 tooltip 内容框
+            onChange(obj) {
+              rest.onChange && rest.onChange(obj);
+              const legends = chart.get('legendController').legends;
+
+              // 各个方向的legends
+              const legendDir = Object.keys(legends);
+              if (legendDir.length === 0) {
+                return;
+              }
+              const legend = legends[legendDir[0]][0];
+
+              const tooltipItems = obj.items;
+              const legendItems = legend.items;
+              const map = {};
+              legendItems.forEach((item) => {
+                map[item.name] = Object.assign({}, item);
+              });
+              tooltipItems.forEach((item) => {
+                const name = item.name;
+                const value = item.value;
+                if (map[name]) {
+                  map[name].value = value;
+                }
+              });
+              legend.setItems(Object.values(map));
+            },
+            onHide() {
+              rest.onHide && rest.onHide();
+              const legends = chart.get('legendController').legends;
+              // 各个方向的legends
+              const legendDir = Object.keys(legends);
+              if (legendDir.length === 0) {
+                return;
+              }
+              const legend = legends[legendDir[0]][0];
+              legend.setItems(chart.getLegendItems().notExist);
+            },
+          };
         }
+
+        chart.tooltip(options);
       }
 
       if (this.coordOptions) {
