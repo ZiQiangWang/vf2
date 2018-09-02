@@ -1,6 +1,10 @@
 <template>
   <vf-chart :data="data">
     <vf-line position="day*value"/>
+    <vf-point position="day*value" :chart-style="{
+      stroke: '#fff',
+      lineWidth: 1
+    }"/>
     <vf-scale field="day" :range="[0, 1]"/>
     <vf-scale field="value" tick-count="5" min="0"/>
     <vf-tooltip
@@ -12,10 +16,6 @@
         items[0].value = '$ ' + items[0].value;
       }"/>
     <vf-axis field="day" justify-label-x/>
-    <vf-point position="day*value" :chart-style="{
-      stroke: '#fff',
-      lineWidth: 1
-    }"/>
   </vf-chart>
 </template>
 
