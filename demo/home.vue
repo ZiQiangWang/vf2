@@ -2,6 +2,7 @@
   <div class="home">
     <div class="title">折线</div>
     <div class="cell" @click="to('line/basic')">基本折线图</div>
+    <div class="cell" @click="to('line/with-point')">基本折线图（带点）</div>
   </div>
 </template>
 

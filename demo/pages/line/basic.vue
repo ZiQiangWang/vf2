@@ -13,13 +13,8 @@
 </template>
 
 <script>
-import Core from '@antv/f2/lib/core';
-import '@antv/f2/lib/geom/line';
-import Tooltip from '@antv/f2/lib/plugin/tooltip';
-
 import LineData from '../../data/lineData';
 
-Core.Chart.plugins.register(Tooltip);
 export default {
   data() {
     return {
