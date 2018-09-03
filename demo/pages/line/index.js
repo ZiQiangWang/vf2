@@ -7,6 +7,7 @@ import Hybird from './hybird';
 import Shapes from './shapes';
 import CustomizeTootlip from './customize-tootlip';
 import AnimatedLine from './animated-line';
+import WithRegion from './with-region';
 
 export default [
   {
@@ -53,6 +54,11 @@ export default [
     path: 'line/animated-line',
     meta: { name: '时序折线图过渡动画' },
     component: AnimatedLine,
+  },
+  {
+    path: 'line/with-region',
+    meta: { name: 'Florida 近 10 年失业率' },
+    component: WithRegion,
   },
 
 
