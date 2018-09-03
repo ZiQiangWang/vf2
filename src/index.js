@@ -10,6 +10,7 @@ import Legend from './legend';
 import Tooltip from './tooltip';
 import Coord from './coord';
 import Guide from './guide';
+import Scrollbar from './scrollbar';
 import Interaction from './interaction';
 
 const components = [
@@ -26,6 +27,7 @@ const components = [
   Axis,
   Legend,
   Tooltip,
+  Scrollbar,
 ];
 
 export default function install(Vue) {

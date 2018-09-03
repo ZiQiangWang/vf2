@@ -195,6 +195,10 @@ export default {
         this.registerGeometry(chart, type, rest);
       });
 
+      if (this.scrollbarOptions) {
+        chart.scrollBar(this.scrollbarOptions);
+      }
+
       chart.render();
 
       if (this.interactionOptions.length) {
@@ -318,6 +322,9 @@ export default {
     },
     setCoord(options) {
       this.coordOptions = options;
+    },
+    setScrollbar(options) {
+      this.scrollbarOptions = options;
     },
     repaint() {
       this.chart && this.chart.repaint();
