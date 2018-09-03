@@ -1,4 +1,3 @@
-import Vue from 'vue';
 import Chart from './chart';
 import Line from './geom/line';
 import Point from './geom/point';
@@ -29,7 +28,7 @@ const components = [
   Tooltip,
 ];
 
-export default function install() {
+export default function install(Vue) {
   components.forEach((component) => {
     Vue.component(component.name, component);
   });
