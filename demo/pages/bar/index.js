@@ -6,6 +6,7 @@ import BasicBar from './basic-bar';
 import DodgeBar from './dodge-bar';
 import StackBar from './stack-bar';
 import RangeColumn from './range-column';
+import RangeBar from './range-bar';
 
 export default [
   {
@@ -47,6 +48,11 @@ export default [
     path: 'bar/range-column',
     meta: { name: '区间柱状图' },
     component: RangeColumn,
-
   },
+  {
+    path: 'bar/range-bar',
+    meta: { name: '各专业毕业生收入范围' },
+    component: RangeBar,
+  },
+
 ];
