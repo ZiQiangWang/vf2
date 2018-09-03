@@ -7,6 +7,7 @@ import DodgeBar from './dodge-bar';
 import StackBar from './stack-bar';
 import RangeColumn from './range-column';
 import RangeBar from './range-bar';
+import NegetiveColumn from './negetive-column';
 
 export default [
   {
@@ -54,5 +55,9 @@ export default [
     meta: { name: '各专业毕业生收入范围' },
     component: RangeBar,
   },
-
+  {
+    path: 'bar/negetive-column',
+    meta: { name: '某基金近 4 季度资产变动' },
+    component: NegetiveColumn,
+  },
 ];
