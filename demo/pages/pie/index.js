@@ -1,6 +1,7 @@
 const Pie = () => import('./pie');
 const Ring = () => import('./ring');
 const Rose = () => import('./rose');
+const Cascade = () => import('./cascade');
 
 export default [
   {
@@ -17,5 +18,10 @@ export default [
     path: 'pie/rose',
     meta: { name: '玫瑰图' },
     component: Rose,
+  },
+  {
+    path: 'pie/cascade',
+    meta: { name: '嵌套环图' },
+    component: Cascade,
   },
 ];
