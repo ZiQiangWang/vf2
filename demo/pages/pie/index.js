@@ -2,6 +2,7 @@ const Pie = () => import('./pie');
 const Ring = () => import('./ring');
 const Rose = () => import('./rose');
 const Cascade = () => import('./cascade');
+const ProgressBar = () => import('./progress-bar');
 
 export default [
   {
@@ -24,4 +25,10 @@ export default [
     meta: { name: '嵌套环图' },
     component: Cascade,
   },
+  {
+    path: 'pie/progress-bar',
+    meta: { name: '环形进度条' },
+    component: ProgressBar,
+  },
+
 ];
