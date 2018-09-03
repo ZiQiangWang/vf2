@@ -192,7 +192,13 @@ export default {
 
       if (this.interactionOptions.length) {
         this.interactionOptions.forEach((option) => {
-          const { type, chartStyle, ...rest } = option;
+          const {
+            type, chartStyle, ref, ...rest
+          } = option;
+          rest.onStart = ev => ref.$emit('start', ev);
+          rest.onEnd = ev => ref.$emit('end', ev);
+          rest.onProcess = ev => ref.$emit('process', ev);
+
           chart.interaction(type, {
             ...rest,
             style: chartStyle,

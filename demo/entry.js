@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import F2 from '@antv/f2/lib';
+import F2 from '@antv/f2/lib/index-all';
 import App from './app';
 
 import router from './routes';

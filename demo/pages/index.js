@@ -2,6 +2,7 @@ import Line from './line';
 import Area from './area';
 import Bar from './bar';
 import Pie from './pie';
+import Interaction from './interaction';
 
 export default [
   {
@@ -20,4 +21,9 @@ export default [
     title: '饼图',
     routes: Pie,
   },
+  {
+    title: '图表交互',
+    routes: Interaction,
+  },
+
 ];
