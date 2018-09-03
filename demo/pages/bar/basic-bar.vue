@@ -8,7 +8,6 @@
       :line="null"
       :grid="F2.Global._defaultAxis.grid"
       justify-label-x/>
-    <vf-tooltip :show-item-marker="false" @show="handleShow"/>
   </vf-chart>
 </template>
 
@@ -33,14 +32,6 @@ export default {
         population: 131744,
       }],
     };
-  },
-  methods: {
-    handleShow(ev) {
-      const items = ev.items;
-      items[0].name = null;
-      items[0].name = items[0].title;
-      items[0].value = `¥ ${items[0].value}`;
-    },
   },
 };
 </script>

@@ -3,6 +3,7 @@ import DodgeColumn from './dodge-column';
 import StackColumn from './stack-column';
 import PercentStackColumn from './percent-stack-column';
 import BasicBar from './basic-bar';
+import DodgeBar from './dodge-bar';
 
 export default [
   {
@@ -29,5 +30,10 @@ export default [
     path: 'bar/basic-bar',
     meta: { name: '基础条形图' },
     component: BasicBar,
+  },
+  {
+    path: 'bar/dodge-bar',
+    meta: { name: '分组条形图' },
+    component: DodgeBar,
   },
 ];
