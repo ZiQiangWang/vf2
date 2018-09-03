@@ -1,6 +1,7 @@
 import BasicColumn from './basic-column';
 import DodgeColumn from './dodge-column';
 import StackColumn from './stack-column';
+import PercentStackColumn from './percent-stack-column';
 
 export default [
   {
@@ -18,4 +19,10 @@ export default [
     meta: { name: '层叠柱状图' },
     component: StackColumn,
   },
+  {
+    path: 'bar/percent-stack-column',
+    meta: { name: '百分比层叠柱状图' },
+    component: PercentStackColumn,
+  },
+
 ];
