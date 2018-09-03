@@ -46,8 +46,8 @@
     <vf-tooltip
       :show-crosshairs="true"
       :custom="true"
-      :onChange="handleChange"
-      :onHide="handleHide"/>
+      @change="handleChange"
+      @hide="handleHide"/>
   </vf-chart>
 </template>
 
