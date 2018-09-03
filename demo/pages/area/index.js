@@ -2,6 +2,7 @@ import Basic from './basic';
 import WithNegative from './with-negative';
 import AreaNone from './area-none';
 import WithNegativeNotStartOnZero from './with-negative-not-start-on-zero';
+import Stacked from './stacked';
 
 export default [
   {
@@ -24,4 +25,10 @@ export default [
     meta: { name: '带负值面积图（x 基线不为 0）' },
     component: WithNegativeNotStartOnZero,
   },
+  {
+    path: 'area/stacked',
+    meta: { name: '层叠面积图' },
+    component: Stacked,
+  },
+
 ];
