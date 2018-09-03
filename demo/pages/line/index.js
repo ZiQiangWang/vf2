@@ -1,17 +1,17 @@
-import Basic from './basic';
-import WithPoint from './with-point';
-import Smooth from './smooth';
-import Series from './series';
-import Gradient from './gradient';
-import Hybird from './hybird';
-import Shapes from './shapes';
-import CustomizeTootlip from './customize-tootlip';
-import AnimatedLine from './animated-line';
-import WithRegion from './with-region';
-import Dynamic from './dynamic';
-import StackedLinePoint from './stacked-line-point';
-import Null from './null';
-import ConnectNull from './connect-null';
+const Basic = () => import('./basic');
+const WithPoint = () => import('./with-point');
+const Smooth = () => import('./smooth');
+const Series = () => import('./series');
+const Gradient = () => import('./gradient');
+const Hybird = () => import('./hybird');
+const Shapes = () => import('./shapes');
+const CustomizeTootlip = () => import('./customize-tootlip');
+const AnimatedLine = () => import('./animated-line');
+const WithRegion = () => import('./with-region');
+const Dynamic = () => import('./dynamic');
+const StackedLinePoint = () => import('./stacked-line-point');
+const Null = () => import('./null');
+const ConnectNull = () => import('./connect-null');
 
 export default [
   {

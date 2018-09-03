@@ -1,16 +1,16 @@
-import BasicColumn from './basic-column';
-import DodgeColumn from './dodge-column';
-import StackColumn from './stack-column';
-import PercentStackColumn from './percent-stack-column';
-import BasicBar from './basic-bar';
-import DodgeBar from './dodge-bar';
-import StackBar from './stack-bar';
-import RangeColumn from './range-column';
-import RangeBar from './range-bar';
-import NegetiveColumn from './negetive-column';
-import NegetiveDodgeColumn from './negetive-dodge-column';
-import NegetiveStackBar from './negetive-stack-bar';
-import TriangleColumn from './triangle-column';
+const BasicColumn = () => import('./basic-column');
+const DodgeColumn = () => import('./dodge-column');
+const StackColumn = () => import('./stack-column');
+const PercentStackColumn = () => import('./percent-stack-column');
+const BasicBar = () => import('./basic-bar');
+const DodgeBar = () => import('./dodge-bar');
+const StackBar = () => import('./stack-bar');
+const RangeColumn = () => import('./range-column');
+const RangeBar = () => import('./range-bar');
+const NegetiveColumn = () => import('./negetive-column');
+const NegetiveDodgeColumn = () => import('./negetive-dodge-column');
+const NegetiveStackBar = () => import('./negetive-stack-bar');
+const TriangleColumn = () => import('./triangle-column');
 
 export default [
   {
