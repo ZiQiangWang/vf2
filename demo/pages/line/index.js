@@ -9,6 +9,7 @@ import CustomizeTootlip from './customize-tootlip';
 import AnimatedLine from './animated-line';
 import WithRegion from './with-region';
 import Dynamic from './dynamic';
+import StackedLinePoint from './stacked-line-point';
 
 export default [
   {
@@ -65,6 +66,12 @@ export default [
     path: 'line/dynamic',
     meta: { name: '实时折线' },
     component: Dynamic,
+  },
+  {
+    path: 'line/stacked-line-point',
+    meta: { name: '层叠点线图' },
+    component: StackedLinePoint,
+
   },
 
 ];
