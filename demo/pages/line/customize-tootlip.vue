@@ -1,5 +1,5 @@
 <template>
-  <vf-chart :data="data" ref="chart">
+  <vf-chart :data="data" ref="chart" :padding="[45, 'auto', 'auto']">
     <vf-line position="date*value" color="#518DFE"/>
     <vf-point position="date*value"
       :size="[
