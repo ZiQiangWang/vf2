@@ -9,6 +9,7 @@ import RangeColumn from './range-column';
 import RangeBar from './range-bar';
 import NegetiveColumn from './negetive-column';
 import NegetiveDodgeColumn from './negetive-dodge-column';
+import NegetiveStackBar from './negetive-stack-bar';
 
 export default [
   {
@@ -65,6 +66,11 @@ export default [
     path: 'bar/negetive-dodge-column',
     meta: { name: '带负值的分组柱状图' },
     component: NegetiveDodgeColumn,
+  },
+  {
+    path: 'bar/negetive-stack-bar',
+    meta: { name: '2018年德国人口金字塔' },
+    component: NegetiveStackBar,
   },
 
 ];
