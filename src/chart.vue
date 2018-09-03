@@ -199,7 +199,7 @@ export default {
       } = option;
       const rs = chart[type]().position(position);
 
-      color && rs.shape(...this.normalize(shape));
+      shape && rs.shape(...this.normalize(shape));
       color && rs.color(...this.normalize(color));
       size && rs.size(...this.normalize(size));
       adjust && rs.adjust(adjust);
