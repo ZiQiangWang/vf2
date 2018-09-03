@@ -5,10 +5,7 @@ export default {
   name: 'vf-scale',
   mixins: [base],
   props: {
-    field: {
-      type: String,
-      required: true,
-    },
+    field: String,
   },
   data() {
     return {

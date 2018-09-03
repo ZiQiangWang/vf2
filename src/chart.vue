@@ -69,6 +69,8 @@ export default {
         return;
       }
 
+      console.log(this.scaleOptions);
+
       chart.source(this.data, this.scaleOptions);
 
       if (this.axisOptions.length) {
@@ -284,7 +286,11 @@ export default {
     },
     setScale(options) {
       const { field, ...rest } = options;
-      this.scaleOptions[field] = rest;
+      if (field) {
+        this.scaleOptions[field] = rest;
+      } else {
+        this.scaleOptions = rest;
+      }
     },
     setAxis(options) {
       this.axisOptions.push(options);
