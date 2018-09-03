@@ -14,9 +14,17 @@ export const geometry = {
   },
   created() {
     let parent = this.$parent;
-    while (parent.$options.name !== 'vf-chart') {
-      parent = parent.$parent;
+    while (parent) {
+      if (parent.$options.name !== 'vf-chart') {
+        parent = parent.$parent;
+      } else {
+        break;
+      }
     }
+    if (!parent) {
+      throw new Error('Component should be wrapped in vf-chart');
+    }
+
     parent.addGeometryOption({
       type: this.name,
       shape: this.shape,
