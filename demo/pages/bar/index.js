@@ -5,6 +5,7 @@ import PercentStackColumn from './percent-stack-column';
 import BasicBar from './basic-bar';
 import DodgeBar from './dodge-bar';
 import StackBar from './stack-bar';
+import RangeColumn from './range-column';
 
 export default [
   {
@@ -41,5 +42,11 @@ export default [
     path: 'bar/stack-bar',
     meta: { name: '堆叠条形图' },
     component: StackBar,
+  },
+  {
+    path: 'bar/range-column',
+    meta: { name: '区间柱状图' },
+    component: RangeColumn,
+
   },
 ];
