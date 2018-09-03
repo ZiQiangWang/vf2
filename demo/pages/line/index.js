@@ -8,6 +8,7 @@ import Shapes from './shapes';
 import CustomizeTootlip from './customize-tootlip';
 import AnimatedLine from './animated-line';
 import WithRegion from './with-region';
+import Dynamic from './dynamic';
 
 export default [
   {
@@ -60,6 +61,10 @@ export default [
     meta: { name: 'Florida 近 10 年失业率' },
     component: WithRegion,
   },
-
+  {
+    path: 'line/dynamic',
+    meta: { name: '实时折线' },
+    component: Dynamic,
+  },
 
 ];
