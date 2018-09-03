@@ -1,5 +1,6 @@
 import Line from './line';
 import Area from './area';
+import Bar from './bar';
 
 export default [
   {
@@ -9,5 +10,9 @@ export default [
   {
     title: '面积图',
     routes: Area,
+  },
+  {
+    title: '柱状图',
+    routes: Bar,
   },
 ];
