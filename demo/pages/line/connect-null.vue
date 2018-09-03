@@ -5,6 +5,7 @@
     <vf-scale field="day" :range="[0,1]"/>
     <vf-scale field="value" tick-count="5" min="0"/>
     <vf-axis field="day" justify-label-x/>
+    <vf-tooltip :show-crosshairs="true"/>
   </vf-chart>
 </template>
 
