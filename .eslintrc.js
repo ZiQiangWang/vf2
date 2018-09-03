@@ -18,6 +18,7 @@ module.exports = {
     'no-restricted-globals': 0,
     'no-unused-expressions': 0,
     'prefer-destructuring': 0,
-    'no-param-reassign': 0
+    'no-param-reassign': 0,
+    'max-len': 0
   }
 };

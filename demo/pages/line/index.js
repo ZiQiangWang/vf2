@@ -5,6 +5,7 @@ import Series from './series';
 import Gradient from './gradient';
 import Hybird from './hybird';
 import Shapes from './shapes';
+import CustomizeTootlip from './customize-tootlip';
 
 export default [
   {
@@ -42,4 +43,10 @@ export default [
     meta: { name: '实际收益和预期收益对比' },
     component: Shapes,
   },
+  {
+    path: 'line/customize-tootlip',
+    meta: { name: '某基金近一个月业绩走势' },
+    component: CustomizeTootlip,
+  },
+
 ];

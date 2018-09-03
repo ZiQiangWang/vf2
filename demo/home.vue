@@ -1,19 +1,24 @@
 <template>
   <div class="home">
-    <div class="title">折线</div>
-    <div class="cell" @click="to('line/basic')">基本折线图</div>
-    <div class="cell" @click="to('line/with-point')">基本折线图（带点）</div>
-    <div class="cell" @click="to('line/smooth')">曲线图（带点）</div>
-    <div class="cell" @click="to('line/series')">商品价格 7 年走势对比</div>
-    <div class="cell" @click="to('line/gradient')">某国女性结婚年龄走势</div>
-    <div class="cell" @click="to('line/hybird')">特性案例：实虚混合线图</div>
-    <div class="cell" @click="to('line/shapes')">实际收益和预期收益对比</div>
+    <template v-for="(page, index) in pages">
+      <div class="title" :key="index">{{page.title}}</div>
+      <div :key="index+1">
+        <div class="cell" :key="ind" v-for="(route, ind) in page.routes" @click="to(route.path)">{{route.meta.name}}</div>
+      </div>
+    </template>
 
   </div>
 </template>
 
 <script>
+import pages from './pages';
+
 export default {
+  data() {
+    return {
+      pages,
+    };
+  },
   methods: {
     to(path) {
       this.$router.push({
