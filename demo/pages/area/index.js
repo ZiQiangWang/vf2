@@ -4,6 +4,7 @@ import AreaNone from './area-none';
 import WithNegativeNotStartOnZero from './with-negative-not-start-on-zero';
 import Stacked from './stacked';
 import PercentStacked from './percent-stacked';
+import Series from './series';
 
 export default [
   {
@@ -36,6 +37,10 @@ export default [
     meta: { name: '百分比层叠面积图' },
     component: PercentStacked,
   },
-
+  {
+    path: 'area/series',
+    meta: { name: '美国、苏联核储备对比' },
+    component: Series,
+  },
 
 ];
