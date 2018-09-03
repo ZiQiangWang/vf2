@@ -181,10 +181,11 @@ export default {
           const {
             type, chartStyle, ref, ...rest
           } = option;
-          const guide = chart.guide()[type]({
-            ...rest,
-            style: chartStyle,
-          });
+
+          if (chartStyle) {
+            rest.style = chartStyle;
+          }
+          const guide = chart.guide()[type](rest);
           ref.setInstance(guide);
         });
       }
