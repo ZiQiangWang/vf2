@@ -3,6 +3,7 @@ import WithNegative from './with-negative';
 import AreaNone from './area-none';
 import WithNegativeNotStartOnZero from './with-negative-not-start-on-zero';
 import Stacked from './stacked';
+import PercentStacked from './percent-stacked';
 
 export default [
   {
@@ -30,5 +31,11 @@ export default [
     meta: { name: '层叠面积图' },
     component: Stacked,
   },
+  {
+    path: 'area/percent-stacked',
+    meta: { name: '百分比层叠面积图' },
+    component: PercentStacked,
+  },
+
 
 ];

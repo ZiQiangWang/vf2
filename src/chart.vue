@@ -69,8 +69,6 @@ export default {
         return;
       }
 
-      console.log(this.scaleOptions);
-
       chart.source(this.data, this.scaleOptions);
 
       if (this.axisOptions.length) {
