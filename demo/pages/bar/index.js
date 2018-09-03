@@ -8,6 +8,7 @@ import StackBar from './stack-bar';
 import RangeColumn from './range-column';
 import RangeBar from './range-bar';
 import NegetiveColumn from './negetive-column';
+import NegetiveDodgeColumn from './negetive-dodge-column';
 
 export default [
   {
@@ -60,4 +61,10 @@ export default [
     meta: { name: '某基金近 4 季度资产变动' },
     component: NegetiveColumn,
   },
+  {
+    path: 'bar/negetive-dodge-column',
+    meta: { name: '带负值的分组柱状图' },
+    component: NegetiveDodgeColumn,
+  },
+
 ];
