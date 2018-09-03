@@ -33,7 +33,7 @@ export default {
   .home {
     height: 100%;
     width: 100%;
-
+    overflow-y: auto;
     .title {
       background: #F6F6F6;
       font-size: 12px;

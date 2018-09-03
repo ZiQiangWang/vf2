@@ -10,6 +10,7 @@ import AnimatedLine from './animated-line';
 import WithRegion from './with-region';
 import Dynamic from './dynamic';
 import StackedLinePoint from './stacked-line-point';
+import Null from './null';
 
 export default [
   {
@@ -71,7 +72,10 @@ export default [
     path: 'line/stacked-line-point',
     meta: { name: '层叠点线图' },
     component: StackedLinePoint,
-
   },
-
+  {
+    path: 'line/null',
+    meta: { name: '存在空值' },
+    component: Null,
+  },
 ];
