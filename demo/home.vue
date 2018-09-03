@@ -1,11 +1,9 @@
 <template>
   <div class="home">
-    <template v-for="(page, index) in pages">
-      <div class="title" :key="index">{{page.title}}</div>
-      <div :key="index+1">
-        <div class="cell" :key="ind" v-for="(route, ind) in page.routes" @click="to(route.path)">{{route.meta.name}}</div>
-      </div>
-    </template>
+    <div v-for="(page, index) in pages" :key="index">
+      <div class="title" >{{page.title}}</div>
+      <div class="cell" :key="ind" v-for="(route, ind) in page.routes" @click="to(route.path)">{{route.meta.name}}</div>
+    </div>
 
   </div>
 </template>
