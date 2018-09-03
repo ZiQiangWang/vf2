@@ -11,6 +11,7 @@ import WithRegion from './with-region';
 import Dynamic from './dynamic';
 import StackedLinePoint from './stacked-line-point';
 import Null from './null';
+import ConnectNull from './connect-null';
 
 export default [
   {
@@ -78,4 +79,10 @@ export default [
     meta: { name: '存在空值' },
     component: Null,
   },
+  {
+    path: 'line/connect-null',
+    meta: { name: '连接空值数据' },
+    component: ConnectNull,
+  },
+
 ];
