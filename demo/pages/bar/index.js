@@ -10,6 +10,7 @@ import RangeBar from './range-bar';
 import NegetiveColumn from './negetive-column';
 import NegetiveDodgeColumn from './negetive-dodge-column';
 import NegetiveStackBar from './negetive-stack-bar';
+import TriangleColumn from './triangle-column';
 
 export default [
   {
@@ -71,6 +72,11 @@ export default [
     path: 'bar/negetive-stack-bar',
     meta: { name: '2018年德国人口金字塔' },
     component: NegetiveStackBar,
+  },
+  {
+    path: 'bar/triangle-column',
+    meta: { name: '中国五大高峰' },
+    component: TriangleColumn,
   },
 
 ];

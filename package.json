@@ -36,6 +36,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-stage-2": "^6.24.1",
     "css-loader": "^1.0.0",
+    "d3-color": "^1.2.3",
     "eslint": "^5.5.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-import-resolver-webpack": "^0.10.1",
