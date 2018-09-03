@@ -196,8 +196,9 @@ export default {
     registerGeometry(chart, type, option) {
       const {
         position, shape, color, size, adjust, animate, chartStyle,
+        ...rest
       } = option;
-      const rs = chart[type]().position(position);
+      const rs = chart[type](rest).position(position);
 
       shape && rs.shape(...this.normalize(shape));
       color && rs.color(...this.normalize(color));
