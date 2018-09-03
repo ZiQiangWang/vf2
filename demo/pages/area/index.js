@@ -5,6 +5,7 @@ import WithNegativeNotStartOnZero from './with-negative-not-start-on-zero';
 import Stacked from './stacked';
 import PercentStacked from './percent-stacked';
 import Series from './series';
+import Gradient from './gradient';
 
 export default [
   {
@@ -41,6 +42,11 @@ export default [
     path: 'area/series',
     meta: { name: '美国、苏联核储备对比' },
     component: Series,
+  },
+  {
+    path: 'area/gradient',
+    meta: { name: '渐变填充面积图' },
+    component: Gradient,
   },
 
 ];
