@@ -199,8 +199,6 @@ export default {
         chart.scrollBar(this.scrollbarOptions);
       }
 
-      chart.render();
-
       if (this.interactionOptions.length) {
         this.interactionOptions.forEach((option) => {
           const {
@@ -216,6 +214,10 @@ export default {
           chart.interaction(type, rest);
         });
       }
+
+      chart.render();
+
+
       this.chart = chart;
       this.$emit('ready', chart);
     },

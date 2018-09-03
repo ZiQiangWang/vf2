@@ -38,7 +38,12 @@ export const geometry = {
 
 export const base = {
   props: {
-    options: Object,
+    options: {
+      type: Object,
+      default() {
+        return {};
+      },
+    },
   },
   created() {
     const { options, ...rest } = this.$props;

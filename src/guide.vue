@@ -16,11 +16,13 @@ export default {
   watch: {
     $attrs(val) {
       const { chartStyle, ...rest } = camelAttrs(val);
+      const { options } = this.$props;
+      const config = { ...rest, ...options };
+      if (chartStyle) {
+        config.style = chartStyle;
+      }
       if (this.guide) {
-        Object.assign(this.guide, {
-          ...rest,
-          style: chartStyle,
-        });
+        Object.assign(this.guide, config);
         this.guide.repaint();
       }
     },
