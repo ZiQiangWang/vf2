@@ -106,7 +106,9 @@ export default {
       }
 
       if (this.tooltipOptions) {
-        const { disabled, linkLegend, ...rest } = this.tooltipOptions;
+        const {
+          disabled, linkLegend, ref, ...rest
+        } = this.tooltipOptions;
         let options = rest;
 
         if (disabled) {
@@ -116,9 +118,9 @@ export default {
             ...rest,
             custom: true, // 自定义 tooltip 内容框
             onChange(obj) {
-              rest.onChange && rest.onChange(obj);
-              const legends = chart.get('legendController').legends;
+              ref.$emit('change', obj, chart);
 
+              const legends = chart.get('legendController').legends;
               // 各个方向的legends
               const legendDir = Object.keys(legends);
               if (legendDir.length === 0) {
@@ -142,7 +144,7 @@ export default {
               legend.setItems(Object.values(map));
             },
             onHide() {
-              rest.onHide && rest.onHide();
+              ref.$emit('hide', chart);
               const legends = chart.get('legendController').legends;
               // 各个方向的legends
               const legendDir = Object.keys(legends);
@@ -151,6 +153,19 @@ export default {
               }
               const legend = legends[legendDir[0]][0];
               legend.setItems(chart.getLegendItems().notExist);
+            },
+          };
+        } else {
+          options = {
+            ...rest,
+            onChange(obj) {
+              ref.$emit('change', obj, chart);
+            },
+            onHide(obj) {
+              ref.$emit('hide', obj, chart);
+            },
+            onShow(obj) {
+              ref.$emit('show', obj, chart);
             },
           };
         }
