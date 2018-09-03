@@ -236,9 +236,7 @@ export default {
       }
       if (justifyLabelY) {
         return (text, index, total) => {
-          let textCfg = {
-            textAlign: 'start',
-          };
+          let textCfg = {};
 
           if (index === 0) {
             textCfg.textBaseline = 'bottom';
@@ -302,6 +300,9 @@ export default {
     },
     destroy() {
       this.chart && this.chart.destroy();
+    },
+    instance() {
+      return this.chart;
     },
   },
 };
