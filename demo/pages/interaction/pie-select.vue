@@ -19,6 +19,11 @@
         :position="['50%', '50%']"
         :html="pieText"/>
       <vf-interaction type="pie-select"
+      :default-selected="{
+        name: '机器之血',
+        percent: 0.18,
+        a: '1'
+      }"
       :animate="{
         duration: 300,
         easing: 'backOut'
