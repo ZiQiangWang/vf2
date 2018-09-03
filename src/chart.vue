@@ -190,29 +190,30 @@ export default {
         });
       }
 
-      if (this.interactionOptions.length) {
-        this.interactionOptions.forEach((option) => {
-          const {
-            type, chartStyle, ref, ...rest
-          } = option;
-          rest.onStart = ev => ref.$emit('start', ev);
-          rest.onEnd = ev => ref.$emit('end', ev);
-          rest.onProcess = ev => ref.$emit('process', ev);
-
-          chart.interaction(type, {
-            ...rest,
-            style: chartStyle,
-          });
-        });
-      }
-
       this.geometryOptions.forEach((option) => {
         const { type, ...rest } = option;
         this.registerGeometry(chart, type, rest);
       });
 
       chart.render();
+
+      if (this.interactionOptions.length) {
+        this.interactionOptions.forEach((option) => {
+          const {
+            type, chartStyle, ref, ...rest
+          } = option;
+
+          rest.onStart = ev => ref.$emit('start', ev);
+          rest.onEnd = ev => ref.$emit('end', ev);
+          rest.onProcess = ev => ref.$emit('process', ev);
+          if (chartStyle) {
+            rest.style = chartStyle;
+          }
+          chart.interaction(type, rest);
+        });
+      }
       this.chart = chart;
+      this.$emit('ready', chart);
     },
     // 注册
     registerGeometry(chart, type, option) {
