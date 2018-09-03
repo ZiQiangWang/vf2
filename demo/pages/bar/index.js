@@ -2,6 +2,7 @@ import BasicColumn from './basic-column';
 import DodgeColumn from './dodge-column';
 import StackColumn from './stack-column';
 import PercentStackColumn from './percent-stack-column';
+import BasicBar from './basic-bar';
 
 export default [
   {
@@ -24,5 +25,9 @@ export default [
     meta: { name: '百分比层叠柱状图' },
     component: PercentStackColumn,
   },
-
+  {
+    path: 'bar/basic-bar',
+    meta: { name: '基础条形图' },
+    component: BasicBar,
+  },
 ];
