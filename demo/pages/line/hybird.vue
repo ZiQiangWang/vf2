@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import F2 from '@antv/f2/lib/index';
+import F2 from '@antv/f2/lib/core';
 
 const random = function random(a, b) {
   return a + Math.random() * (b - a);

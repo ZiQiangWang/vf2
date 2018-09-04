@@ -9,10 +9,8 @@
 </template>
 
 <script>
-import Core from '@antv/f2/lib/core';
+import F2 from '@antv/f2/lib/core';
 import { camelAttrs } from './util';
-
-Core.track(false);
 
 export default {
   name: 'vf-chart',
@@ -45,7 +43,7 @@ export default {
       this.chart && this.chart.changeData(val);
     },
     theme(val) {
-      Core.Global.setTheme(val);
+      F2.Global.setTheme(val);
     },
   },
   mounted() {
@@ -57,7 +55,7 @@ export default {
     // 核心渲染函数
     render() {
       const windowWidth = window.innerWidth;
-      const chart = new Core.Chart({
+      const chart = new F2.Chart({
         el: this.$refs.chart,
         width: this.width || windowWidth,
         height: this.height,
