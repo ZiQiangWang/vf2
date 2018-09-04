@@ -2,6 +2,8 @@ import Line from './line';
 import Area from './area';
 import Bar from './bar';
 import Pie from './pie';
+import Radar from './radar';
+
 import Interaction from './interaction';
 
 export default [
@@ -24,6 +26,11 @@ export default [
   {
     title: '图表交互',
     routes: Interaction,
+  },
+  {
+    title: '雷达图',
+    routes: Radar,
+
   },
 
 ];
