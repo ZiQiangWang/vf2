@@ -1,6 +1,7 @@
 const Basic = () => import('./basic');
 const Area = () => import('./area');
 const Finance = () => import('./finance');
+const FundEvaluation = () => import('./fund-evaluation');
 
 export default [
   {
@@ -17,6 +18,11 @@ export default [
     path: 'radar/finance',
     meta: { name: '投资能力评估' },
     component: Finance,
+  },
+  {
+    path: 'radar/fund-evaluation',
+    meta: { name: '基金评估' },
+    component: FundEvaluation,
   },
 
 ];
