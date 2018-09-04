@@ -3,7 +3,7 @@ import Area from './area';
 import Bar from './bar';
 import Pie from './pie';
 import Radar from './radar';
-
+import Point from './point';
 import Interaction from './interaction';
 
 export default [
@@ -30,7 +30,9 @@ export default [
   {
     title: '雷达图',
     routes: Radar,
-
   },
-
+  {
+    title: '点图',
+    routes: Point,
+  },
 ];
