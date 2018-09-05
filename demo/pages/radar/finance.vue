@@ -1,12 +1,12 @@
 <template>
-  <vf-chart :data="data">
-    <vf-area position="item*score" :style="{
+  <vf2-chart :data="data">
+    <vf2-area position="item*score" :style="{
       fill: 'r(0.45,0.55,0.15) 0:#fff 0.35:#DEF5F5 0.75:#C8EEEF 1:#A8E5E6',
       fillOpacity: 100
     }"/>
-    <vf-coord type="polar" radius="0.8"/>
-    <vf-scale field="score" min="0" max="100" />
-    <vf-axis
+    <vf2-coord type="polar" radius="0.8"/>
+    <vf2-scale field="score" min="0" max="100" />
+    <vf2-axis
       field="score"
       :label="null"
       :line="null"
@@ -20,14 +20,14 @@
           lineWidth: 0
         };
       }"/>
-    <vf-axis field="item"
+    <vf2-axis field="item"
       :label="null"
       :grid="{
         lineDash: null,
         top: true
       }"/>
-    <vf-tooltip disabled/>
-    <vf-guide type="html"
+    <vf2-tooltip disabled/>
+    <vf2-guide type="html"
       v-for="(obj, index) in data" :key="index"
       :options="{
         position: [obj.item, 130],
@@ -38,7 +38,7 @@
           </div>`,
         offsetY:  -10
       }"/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

@@ -1,16 +1,16 @@
 <template>
-  <vf-chart :data="pieData">
-    <vf-interval :position="`a*${field}`" :color="catField" adjust="stack" :chart-style="{
+  <vf2-chart :data="pieData">
+    <vf2-interval :position="`a*${field}`" :color="catField" adjust="stack" :chart-style="{
       lineWidth: 1,
       stroke: '#FFFFFF',
       lineJoin: 'round',
       lineCap: 'round'
     }"/>
-    <vf-coord type="polar" :transposed="true" :radius="radius" :inner-radius="innerRadius" />
-    <vf-legend position="right" :item-formatter="val => val + '   ' + percentMap[val]"/>
-    <vf-axis disabled />
-    <vf-tooltip disabled />
-    <vf-interaction type="pie-select"
+    <vf2-coord type="polar" :transposed="true" :radius="radius" :inner-radius="innerRadius" />
+    <vf2-legend position="right" :item-formatter="val => val + '   ' + percentMap[val]"/>
+    <vf2-axis disabled />
+    <vf2-tooltip disabled />
+    <vf2-interaction type="pie-select"
       startEvent="tap"
       :onEnd="handleOnEnd"
       :animate="{
@@ -18,12 +18,12 @@
         easing: 'backOut'
       }"/>
     <slot></slot>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>
 export default {
-  name: 'vf-pie',
+  name: 'vf2-pie',
   props: {
     data: Array,
     radius: {

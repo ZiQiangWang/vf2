@@ -1,14 +1,14 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="cate*value" color="gender" adjust="stack"/>
-    <vf-coord :transposed="true"/>
-    <vf-legend align="right" item-width="80"/>
-    <vf-axis field="cate" :grid="null" :line="F2.Global._defaultAxis.line"/>
-    <vf-axis field="value"
+  <vf2-chart :data="data">
+    <vf2-interval position="cate*value" color="gender" adjust="stack"/>
+    <vf2-coord :transposed="true"/>
+    <vf2-legend align="right" item-width="80"/>
+    <vf2-axis field="cate" :grid="null" :line="F2.Global._defaultAxis.line"/>
+    <vf2-axis field="value"
       :line="null"
       :grid="F2.Global._defaultAxis.grid"
       justify-label-x/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

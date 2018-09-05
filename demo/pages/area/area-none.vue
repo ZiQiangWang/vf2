@@ -1,12 +1,12 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="year*value" color="type" shape="smooth"/>
-    <vf-area position="year*value" color="type" shape="smooth"/>
-    <vf-scale field="year" tick-count="5" :range="[0,1]"/>
-    <vf-legend disabled />
-    <vf-tooltip :show-crosshairs="true"/>
-    <vf-axis  field="year" justify-label-x />
-  </vf-chart>
+  <vf2-chart :data="data">
+    <vf2-line position="year*value" color="type" shape="smooth"/>
+    <vf2-area position="year*value" color="type" shape="smooth"/>
+    <vf2-scale field="year" tick-count="5" :range="[0,1]"/>
+    <vf2-legend disabled />
+    <vf2-tooltip :show-crosshairs="true"/>
+    <vf2-axis  field="year" justify-label-x />
+  </vf2-chart>
 </template>
 
 <script>

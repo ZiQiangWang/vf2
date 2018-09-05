@@ -1,13 +1,13 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="x*y" :animate="{
+  <vf2-chart :data="data">
+    <vf2-interval position="x*y" :animate="{
       appear: {
         animation: 'shapesScaleInY'
       }
     }"/>
-    <vf-scale field="y" tick-count="5"/>
-    <vf-tooltip :show-item-marker="false" @show="handleShow"/>
-  </vf-chart>
+    <vf2-scale field="y" tick-count="5"/>
+    <vf2-tooltip :show-item-marker="false" @show="handleShow"/>
+  </vf2-chart>
 </template>
 
 <script>

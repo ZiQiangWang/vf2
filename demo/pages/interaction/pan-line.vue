@@ -1,7 +1,7 @@
 <template>
-  <vf-chart :data="data">
-    <vf-scale field="release" min="1990" max="2010"/>
-    <vf-tooltip
+  <vf2-chart :data="data">
+    <vf2-scale field="release" min="1990" max="2010"/>
+    <vf2-tooltip
       :show-crosshairs="true"
       :show-item-marker="false"
       :background="{
@@ -13,13 +13,13 @@
         fill: '#fff'
       }"
       @show="handleTooltipShow"/>
-    <vf-line position="release*count"/>
-    <vf-point position="release*count" :chart-style="{
+    <vf2-line position="release*count"/>
+    <vf2-point position="release*count" :chart-style="{
       lineWidth: 1,
       stroke: '#fff'
     }"/>
-    <vf-interaction type="pan"/>
-    <vf-guide type="tag" :options="{
+    <vf2-interaction type="pan"/>
+    <vf2-guide type="tag" :options="{
       position: [1969, 1344],
       withPoint: false,
       content: '1,344',
@@ -27,11 +27,11 @@
       offsetX: 5,
       direct: 'cr'
     }"/>
-    <vf-scrollbar mode="x"
+    <vf2-scrollbar mode="x"
       :xStyle="{
         offsetY: -5
       }"/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

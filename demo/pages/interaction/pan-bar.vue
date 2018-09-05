@@ -1,8 +1,8 @@
 <template>
-  <vf-chart :data="data">
-    <vf-scale field="date" type="timeCat" tick-count="5" :values="originDates" mask="MM-DD"/>
-    <vf-scale field="steps" tick-count="5"/>
-    <vf-axis field="date"
+  <vf2-chart :data="data">
+    <vf2-scale field="date" type="timeCat" tick-count="5" :values="originDates" mask="MM-DD"/>
+    <vf2-scale field="steps" tick-count="5"/>
+    <vf2-axis field="date"
       :tick-line="{
         length: 4,
         stroke: '#cacaca'
@@ -13,7 +13,7 @@
       :line="{
         top: true
       }"/>
-    <vf-axis field="steps"
+    <vf2-axis field="steps"
       position="right"
       :label="text => {
         return {
@@ -22,13 +22,13 @@
         };
       }"
       :grid="{stroke: '#d1d1d1'}"/>
-    <vf-tooltip :show-item-marker="false"
+    <vf2-tooltip :show-item-marker="false"
       :background="{
         radius: 2,
         padding: [3, 5]
       }"
       @show="handleTooltipShow"/>
-    <vf-guide v-for="(obj, index) in firstDayArr" :key="`line-${index}`"
+    <vf2-guide v-for="(obj, index) in firstDayArr" :key="`line-${index}`"
       type="line"
       :options="{
         top: false,
@@ -40,7 +40,7 @@
         }
       }"
       />
-    <vf-guide v-for="(obj, index) in firstDayArr" :key="`text-${index}`"
+    <vf2-guide v-for="(obj, index) in firstDayArr" :key="`text-${index}`"
       type="text"
       :options="{
         position: [obj.date, 'max'],
@@ -54,17 +54,17 @@
         offsetY: 5
       }"
       />
-    <vf-interval position="date*steps" :chart-style="{
+    <vf2-interval position="date*steps" :chart-style="{
       radius: [2, 2, 0, 0]
     }"/>
-    <vf-scrollbar mode="x"
+    <vf2-scrollbar mode="x"
       :x-style="{
         backgroundColor: '#e8e8e8',
         fillerColor: '#808080',
         offsetY: -2
       }"/>
-    <vf-interaction type="pan"/>
-  </vf-chart>
+    <vf2-interaction type="pan"/>
+  </vf2-chart>
 </template>
 
 <script>

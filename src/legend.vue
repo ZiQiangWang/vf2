@@ -2,7 +2,7 @@
 import { base } from './mixin';
 
 export default {
-  name: 'vf-legend',
+  name: 'vf2-legend',
   mixins: [base],
   props: {
     field: String,

@@ -1,10 +1,10 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="x*y" shape="hybrid" color="type" :chart-style="{dashDim: 'dash'}"/>
-    <vf-scale field="y" tick-count="5"/>
-    <vf-tooltip disabled/>
-    <vf-legend align="center" :item-width="null"/>
-  </vf-chart>
+  <vf2-chart :data="data">
+    <vf2-line position="x*y" shape="hybrid" color="type" :chart-style="{dashDim: 'dash'}"/>
+    <vf2-scale field="y" tick-count="5"/>
+    <vf2-tooltip disabled/>
+    <vf2-legend align="center" :item-width="null"/>
+  </vf2-chart>
 </template>
 
 <script>

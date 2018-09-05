@@ -1,15 +1,15 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="date*value"/>
-    <vf-scale field="date" tick-count="3"/>
-    <vf-tooltip
+  <vf2-chart :data="data">
+    <vf2-line position="date*value"/>
+    <vf2-scale field="date" tick-count="3"/>
+    <vf2-tooltip
       :show-item-marker="false"
       :onShow="(ev) => {
         var items = ev.items;
         items[0].name = items[0].title;
       }"/>
-    <vf-axis field="date" justify-label-x/>
-  </vf-chart>
+    <vf2-axis field="date" justify-label-x/>
+  </vf2-chart>
 </template>
 
 <script>

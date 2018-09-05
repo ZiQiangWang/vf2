@@ -1,16 +1,16 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="year*population"
+  <vf2-chart :data="data">
+    <vf2-interval position="year*population"
       color="year"
       :chart-style="{
         lineWidth: 1,
         stroke: '#fff'
       }"/>
-      <vf-scale field="percent" :formatter="val => val * 100 + '%'"/>
-      <vf-coord type="polar"/>
-      <vf-axis disabled/>
-      <vf-legend position="right" />
-  </vf-chart>
+      <vf2-scale field="percent" :formatter="val => val * 100 + '%'"/>
+      <vf2-coord type="polar"/>
+      <vf2-axis disabled/>
+      <vf2-legend position="right" />
+  </vf2-chart>
 </template>
 
 <script>

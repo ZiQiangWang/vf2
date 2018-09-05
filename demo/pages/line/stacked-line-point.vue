@@ -1,11 +1,11 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="year*value" color="country" size="2" adjust="stack"/>
-    <vf-area position="year*value" color="country" adjust="stack"/>
-    <vf-point position="year*value" color="country" adjust="stack"/>
-    <vf-scale field="year" :range="[0,1]"/>
-    <vf-tooltip :show-crosshairs="true" link-legend/>
-  </vf-chart>
+  <vf2-chart :data="data">
+    <vf2-line position="year*value" color="country" size="2" adjust="stack"/>
+    <vf2-area position="year*value" color="country" adjust="stack"/>
+    <vf2-point position="year*value" color="country" adjust="stack"/>
+    <vf2-scale field="year" :range="[0,1]"/>
+    <vf2-tooltip :show-crosshairs="true" link-legend/>
+  </vf2-chart>
 </template>
 
 <script>

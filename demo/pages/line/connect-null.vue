@@ -1,12 +1,12 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="day*value" :connect-nulls="true"/>
-    <vf-point position="day*value"/>
-    <vf-scale field="day" :range="[0,1]"/>
-    <vf-scale field="value" tick-count="5" min="0"/>
-    <vf-axis field="day" justify-label-x/>
-    <vf-tooltip :show-crosshairs="true"/>
-  </vf-chart>
+  <vf2-chart :data="data">
+    <vf2-line position="day*value" :connect-nulls="true"/>
+    <vf2-point position="day*value"/>
+    <vf2-scale field="day" :range="[0,1]"/>
+    <vf2-scale field="value" tick-count="5" min="0"/>
+    <vf2-axis field="day" justify-label-x/>
+    <vf2-tooltip :show-crosshairs="true"/>
+  </vf2-chart>
 </template>
 
 <script>

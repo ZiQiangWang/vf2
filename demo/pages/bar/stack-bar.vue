@@ -1,15 +1,15 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="State*人口数量" color="年龄段" adjust="stack"/>
-    <vf-scale field="tickCount" tick-count="5"/>
-    <vf-coord :transposed="true"/>
-    <vf-axis field="State" :grid="null" :line="F2.Global._defaultAxis.line"/>
-    <vf-axis field="人口数量"
+  <vf2-chart :data="data">
+    <vf2-interval position="State*人口数量" color="年龄段" adjust="stack"/>
+    <vf2-scale field="tickCount" tick-count="5"/>
+    <vf2-coord :transposed="true"/>
+    <vf2-axis field="State" :grid="null" :line="F2.Global._defaultAxis.line"/>
+    <vf2-axis field="人口数量"
       :line="null"
       :grid="F2.Global._defaultAxis.grid"
       justify-label-x/>
-    <vf-tooltip link-legend/>
-  </vf-chart>
+    <vf2-tooltip link-legend/>
+  </vf2-chart>
 </template>
 
 <script>

@@ -1,13 +1,13 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="time*value" :animate="{
+  <vf2-chart :data="data">
+    <vf2-line position="time*value" :animate="{
       update: {
         animation: 'lineUpdate'
       }
     }"/>
-    <vf-scale field="time" type="timeCat" :range="[0,1]" mask="HH:mm:ss"/>
-    <vf-scale field="value" tick-count="5" min="8"/>
-    <vf-axis field="time" :label="(text, index, total) => {
+    <vf2-scale field="time" type="timeCat" :range="[0,1]" mask="HH:mm:ss"/>
+    <vf2-scale field="value" tick-count="5" min="8"/>
+    <vf2-axis field="time" :label="(text, index, total) => {
       const textCfg = {
         text: ''
       };
@@ -20,7 +20,7 @@
       }
       return textCfg;
     }"/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 time: {
     type: 'timeCat',

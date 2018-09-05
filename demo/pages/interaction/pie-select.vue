@@ -1,6 +1,6 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="a*percent"
+  <vf2-chart :data="data">
+    <vf2-interval position="a*percent"
       :color="['name', ['#1890FF', '#13C2C2', '#2FC25B', '#FACC14', '#F04864', '#8543E0']]"
       adjust="stack"
       :chart-style="{
@@ -9,16 +9,16 @@
         lineJoin: 'round',
         lineCap: 'round'
       }"/>
-      <vf-scale field="percent" :formatter="val => val * 100 + '%'"/>
-      <vf-coord type="polar" :transposed="true" radius="0.85" inner-radius="0.618"/>
-      <vf-axis disabled/>
-      <vf-tooltip disabled/>
-      <vf-legend position="right" marker='square'/>
-       <vf-guide
+      <vf2-scale field="percent" :formatter="val => val * 100 + '%'"/>
+      <vf2-coord type="polar" :transposed="true" radius="0.85" inner-radius="0.618"/>
+      <vf2-axis disabled/>
+      <vf2-tooltip disabled/>
+      <vf2-legend position="right" marker='square'/>
+       <vf2-guide
         type="html"
         :position="['50%', '50%']"
         :html="pieText"/>
-      <vf-interaction type="pie-select"
+      <vf2-interaction type="pie-select"
       :default-selected="{
         name: '机器之血',
         percent: 0.18,
@@ -29,7 +29,7 @@
         easing: 'backOut'
       }"
       @end="handleSelected"/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

@@ -2,7 +2,7 @@
 import { base } from './mixin';
 
 export default {
-  name: 'vf-tooltip',
+  name: 'vf2-tooltip',
   mixins: [base],
   props: {
     linkLegend: Boolean,

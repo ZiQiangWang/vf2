@@ -1,16 +1,16 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="year*percent" color="country" adjust="stack"/>
-    <vf-area position="year*percent" color="country" adjust="stack"/>
-    <vf-scale field="year" :range="[0,1]"/>
-    <vf-scale field="percent" alias="percent(%)" :formatter="value => {
+  <vf2-chart :data="data">
+    <vf2-line position="year*percent" color="country" adjust="stack"/>
+    <vf2-area position="year*percent" color="country" adjust="stack"/>
+    <vf2-scale field="year" :range="[0,1]"/>
+    <vf2-scale field="percent" alias="percent(%)" :formatter="value => {
       value = value || 0;
       value = value * 100;
       return parseInt(value) + '%';
     }"/>
-    <vf-tooltip :show-crosshairs="true" link-legend/>
-    <vf-axis field="year" justify-label-x/>
-  </vf-chart>
+    <vf2-tooltip :show-crosshairs="true" link-legend/>
+    <vf2-axis field="year" justify-label-x/>
+  </vf2-chart>
 </template>
 
 <script>

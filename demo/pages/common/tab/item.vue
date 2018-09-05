@@ -1,5 +1,5 @@
 <template>
-  <label class="vf-tab-item" :class="{
+  <label class="vf2-tab-item" :class="{
     'is-selected': $parent.model === value
   }" @click="handleClick">
     <slot></slot>
@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'vf-tab-item',
+  name: 'vf2-tab-item',
   props: {
     value: String,
   },
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style lang="less">
-  .vf-tab-item {
+  .vf2-tab-item {
     flex: 1;
     text-align: center;
     background: #F2F2F2;

@@ -1,6 +1,6 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="a*percent"
+  <vf2-chart :data="data">
+    <vf2-interval position="a*percent"
       :color="['name', ['#1890FF', '#13C2C2', '#2FC25B', '#FACC14', '#F04864', '#8543E0']]"
       adjust="stack"
       :chart-style="{
@@ -15,12 +15,12 @@
           easing: 'bounceOut'
         }
       }"/>
-      <vf-scale field="percent" :formatter="val => val * 100 + '%'"/>
-      <vf-coord type="polar" :transposed="true" radius="0.85"/>
-      <vf-axis disabled/>
-      <vf-tooltip disabled/>
-      <vf-legend position="right" :item-formatter="val => val + '  ' + map[val]"/>
-  </vf-chart>
+      <vf2-scale field="percent" :formatter="val => val * 100 + '%'"/>
+      <vf2-coord type="polar" :transposed="true" radius="0.85"/>
+      <vf2-axis disabled/>
+      <vf2-tooltip disabled/>
+      <vf2-legend position="right" :item-formatter="val => val + '  ' + map[val]"/>
+  </vf2-chart>
 </template>
 
 <script>

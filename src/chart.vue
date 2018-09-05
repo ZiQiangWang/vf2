@@ -1,5 +1,5 @@
 <template>
-  <div class="vf-chart" :style="{
+  <div class="vf2-chart" :style="{
       width: width + 'px',
       height: height + 'px'
     }">
@@ -13,7 +13,7 @@ import F2 from '@antv/f2/lib/core';
 import { camelAttrs } from './util';
 
 export default {
-  name: 'vf-chart',
+  name: 'vf2-chart',
   props: {
     // 渲染用数据
     data: {

@@ -1,14 +1,14 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="country*population"/>
-    <vf-scale field="population" tick-count="5"/>
-    <vf-coord :transposed="true"/>
-    <vf-axis field="country" :grid="null" :line="F2.Global._defaultAxis.line"/>
-    <vf-axis field="population"
+  <vf2-chart :data="data">
+    <vf2-interval position="country*population"/>
+    <vf2-scale field="population" tick-count="5"/>
+    <vf2-coord :transposed="true"/>
+    <vf2-axis field="country" :grid="null" :line="F2.Global._defaultAxis.line"/>
+    <vf2-axis field="population"
       :line="null"
       :grid="F2.Global._defaultAxis.grid"
       justify-label-x/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

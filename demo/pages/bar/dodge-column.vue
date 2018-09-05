@@ -1,11 +1,11 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="月份*月均降雨量" color="name" :adjust="{
+  <vf2-chart :data="data">
+    <vf2-interval position="月份*月均降雨量" color="name" :adjust="{
       type: 'dodge',
       marginRatio: 0.05
     }"/>
-    <vf-tooltip link-legend/>
-  </vf-chart>
+    <vf2-tooltip link-legend/>
+  </vf2-chart>
 </template>
 
 <script>

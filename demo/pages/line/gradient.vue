@@ -1,13 +1,13 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="year*age" shape="smooth" color="l(0) 0:#F2C587 0.5:#ED7973 1:#8659AF"/>
-    <vf-area position="year*age" shape="smooth" color="l(0) 0:#F2C587 0.5:#ED7973 1:#8659AF"/>
-    <vf-scale field="year" :range="[0, 1]" max="2020"/>
-    <vf-scale field="age" tick-count="5"/>
-    <vf-tooltip :show-crosshairs="true"/>
-    <vf-axis field="year" justify-label-x/>
+  <vf2-chart :data="data">
+    <vf2-line position="year*age" shape="smooth" color="l(0) 0:#F2C587 0.5:#ED7973 1:#8659AF"/>
+    <vf2-area position="year*age" shape="smooth" color="l(0) 0:#F2C587 0.5:#ED7973 1:#8659AF"/>
+    <vf2-scale field="year" :range="[0, 1]" max="2020"/>
+    <vf2-scale field="age" tick-count="5"/>
+    <vf2-tooltip :show-crosshairs="true"/>
+    <vf2-axis field="year" justify-label-x/>
 
-    <vf-guide type="tag"
+    <vf2-guide type="tag"
       :position="[2017, 30.12]"
       content="30.12"
       direct="tl"
@@ -18,7 +18,7 @@
       :pointStyle="{
         fill: '#8659AF'
       }"/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

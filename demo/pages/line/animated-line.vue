@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vf-chart :data="data">
-      <vf-line
+    <vf2-chart :data="data">
+      <vf2-line
         position="reportDateTimestamp*value"
         :sortable="false"
         shape="smooth"
@@ -10,7 +10,7 @@
             animation: 'lineUpdate'
           }
         }"/>
-      <vf-area
+      <vf2-area
         position="reportDateTimestamp*value"
         :sortable="false"
         shape="smooth"
@@ -19,17 +19,17 @@
             animation: 'lineUpdate'
           }
         }"/>
-        <vf-tooltip :show-crosshairs="true"/>
-      <vf-scale field="reportDateTimestamp" tick-count="3" type="timeCat" :range="[0, 1]"/>
-      <vf-scale field="value" tick-count="5" alias="涨幅" :formatter="val => val.toFixed(2) + '%'"/>
-      <vf-axis field="reportDateTimestamp" justify-label-x/>
-    </vf-chart>
-    <vf-tab v-model="duration" @change="handleSelect">
-      <vf-tab-item value="1">近1月</vf-tab-item>
-      <vf-tab-item value="3">近3月</vf-tab-item>
-      <vf-tab-item value="6">近6月</vf-tab-item>
-      <vf-tab-item value="12">近1年</vf-tab-item>
-    </vf-tab>
+        <vf2-tooltip :show-crosshairs="true"/>
+      <vf2-scale field="reportDateTimestamp" tick-count="3" type="timeCat" :range="[0, 1]"/>
+      <vf2-scale field="value" tick-count="5" alias="涨幅" :formatter="val => val.toFixed(2) + '%'"/>
+      <vf2-axis field="reportDateTimestamp" justify-label-x/>
+    </vf2-chart>
+    <vf2-tab v-model="duration" @change="handleSelect">
+      <vf2-tab-item value="1">近1月</vf2-tab-item>
+      <vf2-tab-item value="3">近3月</vf2-tab-item>
+      <vf2-tab-item value="6">近6月</vf2-tab-item>
+      <vf2-tab-item value="12">近1年</vf2-tab-item>
+    </vf2-tab>
   </div>
 
 </template>

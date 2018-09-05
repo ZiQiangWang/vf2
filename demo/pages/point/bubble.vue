@@ -1,16 +1,16 @@
 <template>
-  <vf-chart :data="data">
-    <vf-point position="x*y" color="#1890ff" :size="['z', [10, 40]]"
+  <vf2-chart :data="data">
+    <vf2-point position="x*y" color="#1890ff" :size="['z', [10, 40]]"
       shape="circle"
       :chart-style="{
         lineWidth: 1,
         stroke: '#1890ff',
         opacity: 0.3
       }"/>
-    <vf-scale field="x" min="62" max="96" :nice="false" tick-interval="5" alias="Daily fat intake"/>
-    <vf-scale field="y" min="0" max="165" :nice="false" tick-interval="50" alias="Daily sugar intake"/>
-    <vf-scale field="z" alias="Obesity(adults) %"/>
-    <vf-axis field="x"
+    <vf2-scale field="x" min="62" max="96" :nice="false" tick-interval="5" alias="Daily fat intake"/>
+    <vf2-scale field="y" min="0" max="165" :nice="false" tick-interval="50" alias="Daily sugar intake"/>
+    <vf2-scale field="z" alias="Obesity(adults) %"/>
+    <vf2-axis field="x"
       :label="text => {
         return {
           text: text + ' gr' // 格式化坐标轴显示文本
@@ -21,7 +21,7 @@
         lineWidth: 1,
         lineDash: [2, 2]
       }"/>
-    <vf-axis field="y"
+    <vf2-axis field="y"
       :label="text => {
         if (text > 0) {
           return {
@@ -32,7 +32,7 @@
       :line="F2.Util.mix({}, F2.Global._defaultAxis.line, {
         top: false
       })"/>
-    <vf-guide type="text"
+    <vf2-guide type="text"
       v-for="(item, index) in data" :key="index"
       :position="[item.x, item.y]"
       :content="item.name"
@@ -42,7 +42,7 @@
         fill: '#1890FF'
       }"
     />
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

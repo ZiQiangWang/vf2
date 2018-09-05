@@ -1,12 +1,12 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="time*tem" color="l(90) 0:#1890FF 1:#f7f7f7" shape="smooth"/>
-    <vf-area position="time*tem" color="l(90) 0:#1890FF 1:#f7f7f7" shape="smooth"/>
-    <vf-scale field="time" type="timeCat" tick-count="3" :range="[0,1]"/>
-    <vf-scale field="tem" tick-count="5" min="0"/>
-    <vf-tooltip :show-crosshairs="true"/>
-    <vf-axis field="time" justify-label-x/>
-  </vf-chart>
+  <vf2-chart :data="data">
+    <vf2-line position="time*tem" color="l(90) 0:#1890FF 1:#f7f7f7" shape="smooth"/>
+    <vf2-area position="time*tem" color="l(90) 0:#1890FF 1:#f7f7f7" shape="smooth"/>
+    <vf2-scale field="time" type="timeCat" tick-count="3" :range="[0,1]"/>
+    <vf2-scale field="tem" tick-count="5" min="0"/>
+    <vf2-tooltip :show-crosshairs="true"/>
+    <vf2-axis field="time" justify-label-x/>
+  </vf2-chart>
 </template>
 
 <script>

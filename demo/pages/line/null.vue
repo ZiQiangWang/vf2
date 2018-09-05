@@ -1,13 +1,13 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="year*count" adjust="stack" :color="['medalType', ['#f3ac32', '#b8b8b8', '#bb6e36']]"/>
-    <vf-point position="year*count" adjust="stack"
+  <vf2-chart :data="data">
+    <vf2-line position="year*count" adjust="stack" :color="['medalType', ['#f3ac32', '#b8b8b8', '#bb6e36']]"/>
+    <vf2-point position="year*count" adjust="stack"
       :color="['medalType', ['#f3ac32', '#b8b8b8', '#bb6e36']]"
       :chart-style="{
         lineWidth: 1,
         fill: '#fff',
       }"/>
-    <vf-axis field="year"
+    <vf2-axis field="year"
       :tick-line="{
         length: 4,
         stroke: '#e8e8e8',
@@ -18,8 +18,8 @@
         textBaseline: 'middle',
         rotate: Math.PI / 2
       }"/>
-    <vf-tooltip :show-crosshairs="true" link-legend/>
-  </vf-chart>
+    <vf2-tooltip :show-crosshairs="true" link-legend/>
+  </vf2-chart>
 </template>
 
 <script>

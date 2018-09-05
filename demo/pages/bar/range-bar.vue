@@ -1,10 +1,10 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="profession*range"/>
-    <vf-scale field="range" tick-count="5"/>
-    <vf-coord :transposed="true"/>
-    <vf-axis field="profession" :grid="null" :line="F2.Global._defaultAxis.line"/>
-    <vf-axis field="range"
+  <vf2-chart :data="data">
+    <vf2-interval position="profession*range"/>
+    <vf2-scale field="range" tick-count="5"/>
+    <vf2-coord :transposed="true"/>
+    <vf2-axis field="profession" :grid="null" :line="F2.Global._defaultAxis.line"/>
+    <vf2-axis field="range"
       :line="null"
       :grid="F2.Global._defaultAxis.grid"
       :label="text => {
@@ -13,7 +13,7 @@
         }
       }"
       justify-label-x/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

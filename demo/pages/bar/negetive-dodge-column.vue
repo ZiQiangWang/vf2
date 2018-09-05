@@ -1,15 +1,15 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="time*tem" color="city"
+  <vf2-chart :data="data">
+    <vf2-interval position="time*tem" color="city"
     :chart-style="['tem', {
       radius(val) {
         return val > 0 ? [4, 4, 0, 0] : [0, 0, 4, 4];
       }
     }]"
     adjust="dodge"/>
-    <vf-scale field="tem" tick-count="5"/>
-    <vf-tooltip link-legend/>
-  </vf-chart>
+    <vf2-scale field="tem" tick-count="5"/>
+    <vf2-tooltip link-legend/>
+  </vf2-chart>
 </template>
 
 <script>

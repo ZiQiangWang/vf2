@@ -1,7 +1,7 @@
 <template>
   <div>
-    <vf-chart :data="currentData">
-      <vf-area position="name*value" color="#FE5C5B" :chart-style="{
+    <vf2-chart :data="currentData">
+      <vf2-area position="name*value" color="#FE5C5B" :chart-style="{
         fillOpacity: 0.2
       }"
       :animate="{
@@ -9,41 +9,41 @@
           animation: 'groupWaveIn'
         }
       }"/>
-      <vf-line position="name*value" color="#FE5C5B"
+      <vf2-line position="name*value" color="#FE5C5B"
       :animate="{
         appear: {
           animation: 'groupWaveIn'
         }
       }"/>
-      <vf-point position="name*value" color="#FE5C5B"
+      <vf2-point position="name*value" color="#FE5C5B"
       :animate="{
         appear: {
           delay: 300
         }
       }"/>
 
-      <vf-coord type="polar"/>
-      <vf-scale field="value" min="0" max="10" />
-      <vf-tooltip disabled />
-      <vf-axis
+      <vf2-coord type="polar"/>
+      <vf2-scale field="value" min="0" max="10" />
+      <vf2-tooltip disabled />
+      <vf2-axis
         field="value"
         :label="null"
         :line="null"
         :grid="{
           lineDash: null
         }"/>
-      <vf-axis field="name" :grid="{lineDash: null}"/>
-      <vf-guide type="html"
+      <vf2-axis field="name" :grid="{lineDash: null}"/>
+      <vf2-guide type="html"
         :position="['50%', '50%']"
         :html="html"
       />
-    </vf-chart>
+    </vf2-chart>
 
-    <vf-tab v-model="current">
-      <vf-tab-item value="one">近一月</vf-tab-item>
-      <vf-tab-item value="three">近三月</vf-tab-item>
-      <vf-tab-item value="six">近六月</vf-tab-item>
-    </vf-tab>
+    <vf2-tab v-model="current">
+      <vf2-tab-item value="one">近一月</vf2-tab-item>
+      <vf2-tab-item value="three">近三月</vf2-tab-item>
+      <vf2-tab-item value="six">近六月</vf2-tab-item>
+    </vf2-tab>
   </div>
 
 </template>

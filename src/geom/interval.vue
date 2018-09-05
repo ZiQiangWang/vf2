@@ -2,7 +2,7 @@
 import { geometry } from '../mixin';
 
 export default {
-  name: 'vf-interval',
+  name: 'vf2-interval',
   mixins: [geometry],
   props: {
     shape: {

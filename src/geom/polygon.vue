@@ -2,7 +2,7 @@
 import { geometry } from '../mixin';
 
 export default {
-  name: 'vf-polygon',
+  name: 'vf2-polygon',
   mixins: [geometry],
   props: {
     shape: {

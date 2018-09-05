@@ -1,18 +1,18 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="label*value" color="type" :adjust="{
+  <vf2-chart :data="data">
+    <vf2-interval position="label*value" color="type" :adjust="{
       type: 'dodge',
       marginRatio: 1 / 32
     }"/>
-    <vf-scale field="value" tick-interval="750"/>
-    <vf-coord :transposed="true"/>
-    <vf-axis field="label" :grid="null" :line="F2.Global._defaultAxis.line"/>
-    <vf-axis field="value"
+    <vf2-scale field="value" tick-interval="750"/>
+    <vf2-coord :transposed="true"/>
+    <vf2-axis field="label" :grid="null" :line="F2.Global._defaultAxis.line"/>
+    <vf2-axis field="value"
       :line="null"
       :grid="F2.Global._defaultAxis.grid"
       justify-label-x/>
-    <vf-tooltip link-legend/>
-  </vf-chart>
+    <vf2-tooltip link-legend/>
+  </vf2-chart>
 </template>
 
 <script>

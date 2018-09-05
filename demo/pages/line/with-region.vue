@@ -1,28 +1,28 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="year*value" :color="['type', val => {
+  <vf2-chart :data="data">
+    <vf2-line position="year*value" :color="['type', val => {
       if (val === 'United States') {
         return '#ccc';
     }}]"/>
-    <vf-scale field="year" :range="[0, 1]" :ticks="[1997, 1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017]"/>
-    <vf-scale field="value" tick-count="10" :formatter="val => val.toFixed(1) + '%'"/>
-    <vf-tooltip link-legend/>
+    <vf2-scale field="year" :range="[0, 1]" :ticks="[1997, 1999, 2001, 2003, 2005, 2007, 2009, 2011, 2013, 2015, 2017]"/>
+    <vf2-scale field="value" tick-count="10" :formatter="val => val.toFixed(1) + '%'"/>
+    <vf2-tooltip link-legend/>
 
-    <vf-guide type="rect"
+    <vf2-guide type="rect"
       :start="[2011, 'max']"
       :end="['max', 'min']"
       :chart-style="{
         fill: '#CCD6EC',
         opacity: 0.3
       }"/>
-     <vf-guide type="text"
+     <vf2-guide type="text"
       :position="[2014, 'max']"
       :content="'Scott administratio\n(2011 to present)'"
       :chart-style="{
         fontSize: 10,
         textBaseline: 'top'
       }"/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

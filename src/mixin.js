@@ -15,14 +15,14 @@ export const geometry = {
   created() {
     let parent = this.$parent;
     while (parent) {
-      if (parent.$options.name !== 'vf-chart') {
+      if (parent.$options.name !== 'vf2-chart') {
         parent = parent.$parent;
       } else {
         break;
       }
     }
     if (!parent) {
-      throw new Error('Component should be wrapped in vf-chart');
+      throw new Error('Component should be wrapped in vf2-chart');
     }
 
     parent.addGeometryOption({

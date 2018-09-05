@@ -1,9 +1,9 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="year*sales"/>
-    <vf-scale field="sales" tick-count="5"/>
-    <vf-tooltip :show-item-marker="false" @show="handleShow"/>
-  </vf-chart>
+  <vf2-chart :data="data">
+    <vf2-interval position="year*sales"/>
+    <vf2-scale field="sales" tick-count="5"/>
+    <vf2-tooltip :show-item-marker="false" @show="handleShow"/>
+  </vf2-chart>
 </template>
 
 <script>

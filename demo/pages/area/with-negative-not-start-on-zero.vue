@@ -1,8 +1,8 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="month*value"/>
-    <vf-area position="month*value" :start-on-zero="false"/>
-    <vf-scale :options="{
+  <vf2-chart :data="data">
+    <vf2-line position="month*value"/>
+    <vf2-area position="month*value" :start-on-zero="false"/>
+    <vf2-scale :options="{
       month: {
         range: [0, 1]
       },
@@ -10,8 +10,8 @@
         tickCount: 5
       }
     }"/>
-    <vf-tooltip :show-crosshairs="true"/>
-    <vf-axis field="value" :label="text =>{
+    <vf2-tooltip :show-crosshairs="true"/>
+    <vf2-axis field="value" :label="text =>{
       const textCfg = {};
       if (text <= 0) {
         textCfg.fill = '#1CAA3D';
@@ -19,8 +19,8 @@
       }
       return textCfg;
     }"/>
-    <vf-axis field="month" justify-label-x/>
-  </vf-chart>
+    <vf2-axis field="month" justify-label-x/>
+  </vf2-chart>
 </template>
 
 <script>

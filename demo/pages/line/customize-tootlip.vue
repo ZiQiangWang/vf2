@@ -1,7 +1,7 @@
 <template>
-  <vf-chart :data="data" ref="chart" :padding="[45, 'auto', 'auto']">
-    <vf-line position="date*value" color="#518DFE"/>
-    <vf-point position="date*value"
+  <vf2-chart :data="data" ref="chart" :padding="[45, 'auto', 'auto']">
+    <vf2-line position="date*value" color="#518DFE"/>
+    <vf2-point position="date*value"
       :size="[
         'tag',
         val => val ? 3 : 0
@@ -17,11 +17,11 @@
         stroke: '#fff',
         lineWidth: 1
       }]"/>
-    <vf-scale field="date" tick-count="3" type="timeCat" :range="[0, 1]"/>
-    <vf-scale field="value" tick-count="5" min="0" :formatter="val => val.toFixed(2) + '%'"/>
-    <vf-axis field="date" justify-label-x/>
-    <vf-axis field="value" justify-label-y/>
-    <vf-legend
+    <vf2-scale field="date" tick-count="3" type="timeCat" :range="[0, 1]"/>
+    <vf2-scale field="value" tick-count="5" min="0" :formatter="val => val.toFixed(2) + '%'"/>
+    <vf2-axis field="date" justify-label-x/>
+    <vf2-axis field="value" justify-label-y/>
+    <vf2-legend
       :custom="true"
       :item-width="null"
       :items="[{
@@ -33,22 +33,22 @@
         marker: 'circle',
         fill: '#518DFE'
       }]"/>
-    <vf-tooltip
+    <vf2-tooltip
       :show-item-marker="false"
       :onShow="(ev) => {
         var items = ev.items;
         items[0].name = items[0].title;
       }"/>
-    <vf-guide type="html"
+    <vf2-guide type="html"
       offset-y="-22.5"
       :position="['min', 'max']"
       :html="html"/>
-    <vf-tooltip
+    <vf2-tooltip
       :show-crosshairs="true"
       :custom="true"
       @change="handleChange"
       @hide="handleHide"/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

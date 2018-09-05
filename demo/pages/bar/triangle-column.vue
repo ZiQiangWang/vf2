@@ -1,10 +1,10 @@
 <template>
-  <vf-chart :data="data" :padding="['auto', 40]">
-    <vf-interval position="name*height" color="name" shape="triangle"/>
-    <vf-legend disabled />
-    <vf-axis field="height" disabled/>
-    <vf-axis field="name" :line="null"/>
-    <vf-guide v-for="(obj, index) in data" :key="index"
+  <vf2-chart :data="data" :padding="['auto', 40]">
+    <vf2-interval position="name*height" color="name" shape="triangle"/>
+    <vf2-legend disabled />
+    <vf2-axis field="height" disabled/>
+    <vf2-axis field="name" :line="null"/>
+    <vf2-guide v-for="(obj, index) in data" :key="index"
       type="text" :options="{
       position: [obj.name, obj.height],
       content: obj.height + '米',
@@ -14,7 +14,7 @@
       },
       offsetY: -10
       }"/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

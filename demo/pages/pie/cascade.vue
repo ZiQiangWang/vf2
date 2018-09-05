@@ -1,12 +1,12 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="a*b"
+  <vf2-chart :data="data">
+    <vf2-interval position="a*b"
       color="c"
       adjust="stack"/>
-      <vf-coord type="polar" :transposed="true" inner-radius="0.5" radius="0.85"/>
-      <vf-axis disabled/>
-      <vf-tooltip link-legend/>
-  </vf-chart>
+      <vf2-coord type="polar" :transposed="true" inner-radius="0.5" radius="0.85"/>
+      <vf2-axis disabled/>
+      <vf2-tooltip link-legend/>
+  </vf2-chart>
 </template>
 
 <script>

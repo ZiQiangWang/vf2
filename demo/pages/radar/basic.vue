@@ -1,13 +1,13 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="item*score" color="user"/>
-    <vf-point position="item*score" color="user" :chart-style="{
+  <vf2-chart :data="data">
+    <vf2-line position="item*score" color="user"/>
+    <vf2-point position="item*score" color="user" :chart-style="{
       stroke: '#fff',
       lineWidth: 1
     }"/>
-    <vf-coord type="polar"/>
-    <vf-scale field="score" min="0" max="120" tick-count="4" :nice="false"/>
-    <vf-axis
+    <vf2-coord type="polar"/>
+    <vf2-scale field="score" min="0" max="120" tick-count="4" :nice="false"/>
+    <vf2-axis
       field="score"
       :label="(text, index, total) => {
         if (index === total - 1) return null;
@@ -19,9 +19,9 @@
         lineDash: null,
         type: 'arc' // 弧线网格
       }"/>
-    <vf-axis field="item" :grid="{lineDash: null}"/>
-    <vf-tooltip link-legend/>
-  </vf-chart>
+    <vf2-axis field="item" :grid="{lineDash: null}"/>
+    <vf2-tooltip link-legend/>
+  </vf2-chart>
 </template>
 
 <script>

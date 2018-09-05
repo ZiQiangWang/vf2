@@ -1,21 +1,21 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="time*value" color="type" :shape="['type', type => {
+  <vf2-chart :data="data">
+    <vf2-line position="time*value" color="type" :shape="['type', type => {
       if (type === '预期收益率') {
         return 'line';
       }
       if (type === '实际收益率') {
         return 'dash';
       }}]"/>
-    <vf-scale field="time"
+    <vf2-scale field="time"
       type="timeCat"
       tick-Count="3"
       mask="hh:mm"
       :range="[0, 1]"/>
-    <vf-scale field="value" tick-count="3" :formatter="val => val + '%'"/>
-    <vf-axis field="time" :line="null" justify-label-x />
-    <vf-legend position="bottom" offset="-5"/>
-  </vf-chart>
+    <vf2-scale field="value" tick-count="3" :formatter="val => val + '%'"/>
+    <vf2-axis field="time" :line="null" justify-label-x />
+    <vf2-legend position="bottom" offset="-5"/>
+  </vf2-chart>
 </template>
 
 <script>

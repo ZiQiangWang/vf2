@@ -1,13 +1,13 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="day*value"/>
-    <vf-point position="day*value" :chart-style="{
+  <vf2-chart :data="data">
+    <vf2-line position="day*value"/>
+    <vf2-point position="day*value" :chart-style="{
       stroke: '#fff',
       lineWidth: 1
     }"/>
-    <vf-scale field="day" :range="[0, 1]"/>
-    <vf-scale field="value" tick-count="5" min="0"/>
-    <vf-tooltip
+    <vf2-scale field="day" :range="[0, 1]"/>
+    <vf2-scale field="value" tick-count="5" min="0"/>
+    <vf2-tooltip
       :show-crosshairs="true"
       :show-item-marker="false"
       :onShow="(ev) =>{
@@ -15,8 +15,8 @@
         items[0].name = null;
         items[0].value = '$ ' + items[0].value;
       }"/>
-    <vf-axis field="day" justify-label-x/>
-  </vf-chart>
+    <vf2-axis field="day" justify-label-x/>
+  </vf2-chart>
 </template>
 
 <script>

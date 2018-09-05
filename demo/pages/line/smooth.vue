@@ -1,15 +1,15 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="time*tem" shape="smooth"/>
-    <vf-point position="time*tem"  shape="smooth" :chart-style="{
+  <vf2-chart :data="data">
+    <vf2-line position="time*tem" shape="smooth"/>
+    <vf2-point position="time*tem"  shape="smooth" :chart-style="{
       stroke: '#fff',
       lineWidth: 1
     }"/>
-    <vf-scale field="time" type="timeCat" mask="MM/DD" tick-count="3" :range="[0, 1]"/>
-    <vf-scale field="tem" tick-count="5" min="0" alias='日均温度'/>
-    <vf-tooltip :show-crosshairs="true"/>
-    <vf-axis field="time" justify-label-x/>
-  </vf-chart>
+    <vf2-scale field="time" type="timeCat" mask="MM/DD" tick-count="3" :range="[0, 1]"/>
+    <vf2-scale field="tem" tick-count="5" min="0" alias='日均温度'/>
+    <vf2-tooltip :show-crosshairs="true"/>
+    <vf2-axis field="time" justify-label-x/>
+  </vf2-chart>
 </template>
 
 <script>

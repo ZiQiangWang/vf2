@@ -1,9 +1,9 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="year*percent" color="country" adjust="stack"/>
-    <vf-scale field="percent" min="0" :formatter="val => (val * 100).toFixed(0) + '%'"/>
-    <vf-tooltip link-legend/>
-  </vf-chart>
+  <vf2-chart :data="data">
+    <vf2-interval position="year*percent" color="country" adjust="stack"/>
+    <vf2-scale field="percent" min="0" :formatter="val => (val * 100).toFixed(0) + '%'"/>
+    <vf2-tooltip link-legend/>
+  </vf2-chart>
 </template>
 
 <script>

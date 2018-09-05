@@ -2,7 +2,7 @@
 import { base } from './mixin';
 
 export default {
-  name: 'vf-axis',
+  name: 'vf2-axis',
   mixins: [base],
   props: {
     field: String,

@@ -1,9 +1,9 @@
 <template>
-  <vf-chart :data="data" @ready="handleReady">
-    <vf-interval position="year*sales"/>
-    <vf-scale field="sales" tick-count="5"/>
-    <vf-tooltip disabled/>
-    <vf-interaction type="interval-select"
+  <vf2-chart :data="data" @ready="handleReady">
+    <vf2-interval position="year*sales"/>
+    <vf2-scale field="sales" tick-count="5"/>
+    <vf2-tooltip disabled/>
+    <vf2-interaction type="interval-select"
       :select-axis-style="{
         fill: '#000',
         fontWeight: 'bold'
@@ -15,7 +15,7 @@
       mode="range"
       @end="handleEnd"
       />
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

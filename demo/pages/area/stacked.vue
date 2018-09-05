@@ -1,16 +1,16 @@
 <template>
   <div class="wrapper">
-   <vf-chart :data="data">
-      <vf-line position="date*value" color="city" adjust="stack"/>
-      <vf-area position="date*value" color="city" adjust="stack"/>
-      <vf-scale field="date" :range="[0,1]" type="timeCat" mask="MM-DD"/>
-      <vf-scale field="value" tick-count="4" max="300"/>
-      <vf-tooltip :show-crosshairs="true"
+   <vf2-chart :data="data">
+      <vf2-line position="date*value" color="city" adjust="stack"/>
+      <vf2-area position="date*value" color="city" adjust="stack"/>
+      <vf2-scale field="date" :range="[0,1]" type="timeCat" mask="MM-DD"/>
+      <vf2-scale field="value" tick-count="4" max="300"/>
+      <vf2-tooltip :show-crosshairs="true"
         link-legend
         @change="handleChange"
         @hide="handleHide"/>
-      <vf-axis field="date" justify-label-x/>
-    </vf-chart>
+      <vf2-axis field="date" justify-label-x/>
+    </vf2-chart>
     <div id="date" ref="date">{{currentDate}}</div>
   </div>
 

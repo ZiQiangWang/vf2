@@ -2,7 +2,7 @@
 import { base } from './mixin';
 
 export default {
-  name: 'vf-scale',
+  name: 'vf2-scale',
   mixins: [base],
   props: {
     field: String,

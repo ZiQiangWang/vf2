@@ -2,7 +2,7 @@
 import { geometry } from '../mixin';
 
 export default {
-  name: 'vf-schema',
+  name: 'vf2-schema',
   mixins: [geometry],
   props: {
     shape: {

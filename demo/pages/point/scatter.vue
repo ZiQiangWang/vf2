@@ -1,9 +1,9 @@
 <template>
-  <vf-chart :data="data">
-    <vf-point position="height*weight" color="gender" :chart-style="{
+  <vf2-chart :data="data">
+    <vf2-point position="height*weight" color="gender" :chart-style="{
       fillOpacity: 0.65
     }"/>
-    <vf-scale :options="{
+    <vf2-scale :options="{
       height: {
         tickCount: 5
       },
@@ -11,8 +11,8 @@
         tickCount: 5
       }
     }"/>
-    <vf-axis field="height" justify-label-x/>
-  </vf-chart>
+    <vf2-axis field="height" justify-label-x/>
+  </vf2-chart>
 </template>
 
 <script>

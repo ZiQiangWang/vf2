@@ -1,6 +1,6 @@
 <template>
-  <vf-chart :data="data">
-    <vf-interval position="x*y"
+  <vf2-chart :data="data">
+    <vf2-interval position="x*y"
       size="20"
       :animate="{
         appear: {
@@ -8,11 +8,11 @@
           easing: 'cubicIn'
         }
       }"/>
-      <vf-scale max="100" min="0"/>
-      <vf-coord type="polar" :transposed="true" inner-radius="0.8" radius="0.85"/>
-      <vf-axis disabled/>
-      <vf-tooltip disabled/>
-      <vf-guide type="arc" :options="{
+      <vf2-scale max="100" min="0"/>
+      <vf2-coord type="polar" :transposed="true" inner-radius="0.8" radius="0.85"/>
+      <vf2-axis disabled/>
+      <vf2-tooltip disabled/>
+      <vf2-guide type="arc" :options="{
         start: [0, 0],
         end: [1, 99.98],
         top: false,
@@ -22,7 +22,7 @@
         }
       }"/>
 
-      <vf-guide type="text" :options="{
+      <vf2-guide type="text" :options="{
         position: ['50%', '50%'],
         content: '85%',
         style: {
@@ -30,7 +30,7 @@
           fill: '#1890FF'
         }
       }"/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

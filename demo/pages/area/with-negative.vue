@@ -1,11 +1,11 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="month*value"/>
-    <vf-area position="month*value"/>
-    <vf-scale field="month" :range="[0,1]"/>
-    <vf-scale field="value" tick-count="5" min="-100" max="100" :nice="false"/>
-    <vf-tooltip :show-crosshairs="true"/>
-    <vf-axis field="value" :grid="text => {
+  <vf2-chart :data="data">
+    <vf2-line position="month*value"/>
+    <vf2-area position="month*value"/>
+    <vf2-scale field="month" :range="[0,1]"/>
+    <vf2-scale field="value" tick-count="5" min="-100" max="100" :nice="false"/>
+    <vf2-tooltip :show-crosshairs="true"/>
+    <vf2-axis field="value" :grid="text => {
       if (text === '0') {
         return {
           lineDash: null,
@@ -13,7 +13,7 @@
         };
       }
     }"/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

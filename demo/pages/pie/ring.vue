@@ -1,20 +1,20 @@
 <template>
-  <vf-chart :data="data" :padding="[20, 'auto']">
-    <vf-interval position="a*percent"
+  <vf2-chart :data="data" :padding="[20, 'auto']">
+    <vf2-interval position="a*percent"
       :color="['name', ['#FE5D4D', '#3BA4FF', '#737DDE']]"
       adjust="stack"/>
-      <vf-scale field="percent" :formatter="val => val + '%'"/>
-      <vf-coord type="polar" :transposed="true" inner-radius="0.7" radius="0.85"/>
-      <vf-axis disabled/>
-      <vf-tooltip disabled/>
-      <vf-legend position="right" :item-formatter="val => val + '  ' + map[val]"/>
-      <vf-guide type="html"
+      <vf2-scale field="percent" :formatter="val => val + '%'"/>
+      <vf2-coord type="polar" :transposed="true" inner-radius="0.7" radius="0.85"/>
+      <vf2-axis disabled/>
+      <vf2-tooltip disabled/>
+      <vf2-legend position="right" :item-formatter="val => val + '  ' + map[val]"/>
+      <vf2-guide type="html"
         :position="['50%', '45%']"
         html='<div style="width: 250px;height: 40px;text-align: center;">
             <div style="font-size: 16px">总资产</div>
             <div style="font-size: 24px">133.08 亿</div>
           </div>'/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

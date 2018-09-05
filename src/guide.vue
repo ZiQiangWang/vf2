@@ -3,7 +3,7 @@ import { base } from './mixin';
 import { camelAttrs } from './util';
 
 export default {
-  name: 'vf-guide',
+  name: 'vf2-guide',
   mixins: [base],
   props: {
     type: String,

@@ -1,11 +1,11 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="date*value" color="type"/>
-    <vf-scale field="date" type="timeCat" tick-count="3"/>
-    <vf-scale field="value" tick-count="5"/>
-    <vf-tooltip link-legend/>
-    <vf-axis field="date" justify-label-x/>
-  </vf-chart>
+  <vf2-chart :data="data">
+    <vf2-line position="date*value" color="type"/>
+    <vf2-scale field="date" type="timeCat" tick-count="3"/>
+    <vf2-scale field="value" tick-count="5"/>
+    <vf2-tooltip link-legend/>
+    <vf2-axis field="date" justify-label-x/>
+  </vf2-chart>
 </template>
 
 <script>

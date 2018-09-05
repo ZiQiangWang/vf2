@@ -1,16 +1,16 @@
 <template>
-  <vf-chart :data="data">
-    <vf-line position="year*value" color="country" shape="smooth"/>
-    <vf-area position="year*value" color="country" shape="smooth"/>
-    <vf-scale field="year" tick-count="5"/>
-    <vf-axis field="year" justify-label-x/>
-    <vf-axis field="value" :label="text => {
+  <vf2-chart :data="data">
+    <vf2-line position="year*value" color="country" shape="smooth"/>
+    <vf2-area position="year*value" color="country" shape="smooth"/>
+    <vf2-scale field="year" tick-count="5"/>
+    <vf2-axis field="year" justify-label-x/>
+    <vf2-axis field="value" :label="text => {
       return {
         text: text / 1000 + 'k'
       }
     }"/>
-    <vf-tooltip :show-crosshairs="true" link-legend/>
-  </vf-chart>
+    <vf2-tooltip :show-crosshairs="true" link-legend/>
+  </vf2-chart>
 </template>
 
 <script>

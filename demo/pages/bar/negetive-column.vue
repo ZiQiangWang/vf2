@@ -1,11 +1,11 @@
 <template>
-  <vf-chart :data="data" :padding="[45, 'auto', 'auto']">
-    <vf-interval position="season*value"
+  <vf2-chart :data="data" :padding="[45, 'auto', 'auto']">
+    <vf2-interval position="season*value"
       :color="['value', val => val > 0 ? '#FC674D' : '#9AC2AB']"
       size="80"/>
-    <vf-axis field="value" disabled/>
-    <vf-tooltip disabled/>
-    <vf-legend :custom="true" :items="[{
+    <vf2-axis field="value" disabled/>
+    <vf2-tooltip disabled/>
+    <vf2-legend :custom="true" :items="[{
       name: '净申购',
       marker: 'circle',
       fill: '#FC674D'
@@ -16,7 +16,7 @@
     }]"
     align="right"
     :itemWidth="null"/>
-    <vf-guide v-for="(obj, index) in data"  :key="`text-${index}`"
+    <vf2-guide v-for="(obj, index) in data"  :key="`text-${index}`"
       type="text"
       :position="[obj.season, obj.value > 0 ? obj.value : 0]"
       :content="numberToMoney(obj.value)"
@@ -25,14 +25,14 @@
         textBaseline: 'bottom'
       }"
     offset-y="-5"/>
-    <vf-guide v-for="(obj, index) in data" :key="`rect-${index}`"
+    <vf2-guide v-for="(obj, index) in data" :key="`rect-${index}`"
       type="rect"
       :start="[index - 0.46, 'max']"
       :end="[index + 0.46, 'min']"
       :chart-style="{
         fill: '#f8f8f8'
       }"/>
-    <vf-guide type="text" :options="{
+    <vf2-guide type="text" :options="{
       position: ['min', 'max'],
       content: '单位（万元）',
       style: {
@@ -41,7 +41,7 @@
       },
       offsetY: -23
     }"/>
-  </vf-chart>
+  </vf2-chart>
 </template>
 
 <script>

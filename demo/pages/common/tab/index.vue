@@ -1,12 +1,12 @@
 <template>
-  <div class="vf-tab">
+  <div class="vf2-tab">
     <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'vf-tab',
+  name: 'vf2-tab',
   props: {
     value: {},
   },
@@ -25,7 +25,7 @@ export default {
 </script>
 
 <style lang="less">
-  .vf-tab {
+  .vf2-tab {
     display: flex;
   }
 </style>

@@ -2,7 +2,7 @@
 import { base } from './mixin';
 
 export default {
-  name: 'vf-scrollbar',
+  name: 'vf2-scrollbar',
   mixins: [base],
   props: {
     field: String,
