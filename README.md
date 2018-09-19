@@ -5,23 +5,23 @@
 
 提供了多种组件：
 
-- [vf2-chart](#jump)
-- [vf2-point](#geom)
-- vf2-line
-- vf2-area
-- vf2-interval
-- vf2-polygon
-- vf2-schema
-- vf2-axis
-- vf2-scale
-- vf2-tooltip
-- vf2-legend
-- vf2-coord
-- vf2-guide
-- vf2-scrollbar
-- vf2-interaction
+- [vf2-chart](#chart)
+- [vf2-point](#geometry)
+- [vf2-line](#geometry)
+- [vf2-area](#geometry)
+- [vf2-interval](#geometry)
+- [vf2-polygon](#geometry)
+- [vf2-schema](#geometry)
+- [vf2-scale](#scale)
+- [vf2-coord](#coord)
+- [vf2-axis](#axis)
+- [vf2-legend](#legend)
+- [vf2-tooltip](#tooltip)
+- [vf2-guide](#guide)
+- [vf2-scrollbar](#scrollbar)
+- [vf2-interaction](#interaction)
 
-## <a id="jump">#</a>chart
+## chart
 
 作为绘图的根组件，所有其他组件被包裹在内部。[Chart属性](https://antv.alipay.com/zh-cn/f2/3.x/api/chart.html#_width)可以通过组件属性传入，但是有两点要注意：
 
@@ -35,7 +35,7 @@
 | height | Number | 250               | 高度                   |
 | theme  | String |                   | 切换图表主题           |
 
-## <a id="goem">#</a>Geometry
+## Geometry
 
 `vf2-point`、`vf2-line`、`vf2-area`、`vf2-interval`、`vf2-polygon`、`vf2-schema`，这几个组件是对于F2的Geometry封装。
 
