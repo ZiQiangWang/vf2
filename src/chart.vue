@@ -20,12 +20,14 @@ export default {
       type: Array,
       required: true,
     },
-    width: Number,
+    width: {
+      type: Number,
+      default: window.innerWidth,
+    },
     height: {
       type: Number,
       default: 250,
     },
-    theme: String,
   },
   data() {
     return {
@@ -42,9 +44,6 @@ export default {
     data(val) {
       this.chart && this.chart.changeData(val);
     },
-    theme(val) {
-      F2.Global.setTheme(val);
-    },
   },
   mounted() {
     this.$nextTick(() => {
@@ -54,10 +53,9 @@ export default {
   methods: {
     // 核心渲染函数
     render() {
-      const windowWidth = window.innerWidth;
       const chart = new F2.Chart({
         el: this.$refs.chart,
-        width: this.width || windowWidth,
+        width: this.width,
         height: this.height,
         pixelRatio: window.devicePixelRatio,
         ...camelAttrs(this.$attrs),

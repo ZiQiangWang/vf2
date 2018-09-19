@@ -3,12 +3,12 @@ import { camelAttrs, upperFirst } from './util';
 export const geometry = {
   props: {
     position: {
-      type: String,
+      type: [String, Array],
       required: true,
     },
     color: [String, Array],
     size: [Number, String, Array],
-    adjust: [String, Object, Array],
+    adjust: [String, Object],
     animate: [Boolean, Object],
     chartStyle: [Object, Array],
   },

@@ -16,7 +16,11 @@
         }
       }"/>
       <vf2-scale field="percent" :formatter="val => val * 100 + '%'"/>
-      <vf2-coord type="polar" :transposed="true" radius="0.85"/>
+      <!-- <vf2-coord type="polar" :transposed="true" radius="0.85"/> -->
+      <vf2-coord type="polar" :options="{
+        transposed: true,
+        radius: 0.85
+      }"/>
       <vf2-axis disabled/>
       <vf2-tooltip disabled/>
       <vf2-legend position="right" :item-formatter="val => val + '  ' + map[val]"/>

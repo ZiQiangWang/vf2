@@ -34,7 +34,7 @@
         top: false,
         start: [obj.date, 'min'],
         end: [obj.date, 'max'],
-        chartStyle: {
+        style: {
           lineWidth: 1,
           stroke: '#A4A4A4'
         }
